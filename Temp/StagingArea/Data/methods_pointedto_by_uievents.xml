@@ -1,0 +1,8 @@
+<linker>
+	<assembly fullname="Assembly-UnityScript">
+		<type fullname="enterGame">
+			<method name="exitButtonClick"/>
+			<method name="enterButtonClick"/>
+		</type>
+	</assembly>
+</linker>
