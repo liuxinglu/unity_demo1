@@ -2,35 +2,37 @@
 All Assemblies
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 2551
-    Nested = 175
+  Total Type Removals = 2573
+    Nested = 180
     Interfaces = 173
-    Abstract Classes = 188
-    Generic Types = 97
-    Generic Interfaces = 6
-    Generic Abstract Classes = 6
-    Attributes = 181
-  Total Field Removals = 773
-  Total Method Removals = 10909
+    Abstract Classes = 190
+    Generic Types = 82
+    Generic Interfaces = 4
+    Generic Abstract Classes = 4
+    Attributes = 188
+  Total Field Removals = 856
+  Total Method Removals = 11275
 ---------------------------------------------------
 ---------------------------------------------------
 Assembly: Boo.Lang
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 72
+  Total Type Removals = 76
     Nested = 23
     Interfaces = 5
     Abstract Classes = 10
     Generic Types = 9
     Generic Interfaces = 0
     Generic Abstract Classes = 3
-    Attributes = 4
+    Attributes = 5
   Total Field Removals = 5
-  Total Method Removals = 298
+  Total Method Removals = 295
   References Removed = 0
 ---------------------------------------------------
     Boo.Lang.AbstractGenerator
     Boo.Lang.AbstractGeneratorEnumerator
+    Boo.Lang.BooComparer
+    Boo.Lang.BooHashCodeProvider
     Boo.Lang.Builtins
         .ctor()
         array(System.Collections.IEnumerable)
@@ -70,7 +72,6 @@ Summary:
     Boo.Lang.DuckTypedAttribute
     Boo.Lang.DynamicVariable`1
     Boo.Lang.EnumeratorItemTypeAttribute
-        get_ItemType()
     Boo.Lang.Environments.ActiveEnvironment
     Boo.Lang.Environments.CachingEnvironment
     Boo.Lang.Environments.ClosedEnvironment
@@ -87,8 +88,6 @@ Summary:
     Boo.Lang.GenericGenerator`1
     Boo.Lang.GenericGeneratorEnumerator`1
     Boo.Lang.Hash
-        .ctor(System.Boolean)
-        .ctor(System.Collections.IEnumerable)
     Boo.Lang.ICallable
     Boo.Lang.IQuackFu
     Boo.Lang.IQuackFuMember
@@ -948,16 +947,16 @@ Summary:
 Assembly: mscorlib
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 849
-    Nested = 52
-    Interfaces = 91
-    Abstract Classes = 67
-    Generic Types = 7
+  Total Type Removals = 835
+    Nested = 51
+    Interfaces = 89
+    Abstract Classes = 64
+    Generic Types = 5
     Generic Interfaces = 0
-    Generic Abstract Classes = 1
-    Attributes = 86
-  Total Field Removals = 495
-  Total Method Removals = 4863
+    Generic Abstract Classes = 0
+    Attributes = 83
+  Total Field Removals = 499
+  Total Method Removals = 4680
   References Removed = 0
 ---------------------------------------------------
     <PrivateImplementationDetails>
@@ -1100,14 +1099,12 @@ Summary:
         GetBytes(System.Boolean)
         GetBytes(System.Char)
         GetBytes(System.Double)
-        GetBytes(System.Int16)
         GetBytes(System.Int64)
         GetBytes(System.Single)
         GetBytes(System.UInt16)
         GetBytes(System.UInt32)
         GetBytes(System.UInt64)
         GetULongBytes(System.Byte*)
-        GetUShortBytes(System.Byte*)
         ToBoolean(System.Byte[],System.Int32)
         ToChar(System.Byte[],System.Int32)
         ToInt64(System.Byte[],System.Int32)
@@ -1490,8 +1487,6 @@ Summary:
         get_SetupInformation()
         get_SetupInformationNoCopy()
         get_ShadowCopyFiles()
-        GetAssemblies()
-        GetAssemblies(System.Boolean)
         GetCurrentThreadId()
         GetData(System.String)
         getDomainID()
@@ -1641,30 +1636,18 @@ Summary:
         get_LoadedAssembly()
     System.Attribute
         FindAttribute(System.Object[])
-        get_TypeId()
         GetCustomAttribute(System.Reflection.Assembly,System.Type)
         GetCustomAttribute(System.Reflection.Assembly,System.Type,System.Boolean)
         GetCustomAttribute(System.Reflection.Module,System.Type)
         GetCustomAttribute(System.Reflection.Module,System.Type,System.Boolean)
         GetCustomAttribute(System.Reflection.ParameterInfo,System.Type)
         GetCustomAttribute(System.Reflection.ParameterInfo,System.Type,System.Boolean)
-        GetCustomAttributes(System.Reflection.Assembly)
-        GetCustomAttributes(System.Reflection.Assembly,System.Boolean)
-        GetCustomAttributes(System.Reflection.Assembly,System.Type)
-        GetCustomAttributes(System.Reflection.Assembly,System.Type,System.Boolean)
         GetCustomAttributes(System.Reflection.MemberInfo)
-        GetCustomAttributes(System.Reflection.MemberInfo,System.Boolean)
         GetCustomAttributes(System.Reflection.MemberInfo,System.Type)
-        GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)
         GetCustomAttributes(System.Reflection.Module)
-        GetCustomAttributes(System.Reflection.Module,System.Boolean)
         GetCustomAttributes(System.Reflection.Module,System.Type)
-        GetCustomAttributes(System.Reflection.Module,System.Type,System.Boolean)
         GetCustomAttributes(System.Reflection.ParameterInfo)
-        GetCustomAttributes(System.Reflection.ParameterInfo,System.Boolean)
         GetCustomAttributes(System.Reflection.ParameterInfo,System.Type)
-        GetCustomAttributes(System.Reflection.ParameterInfo,System.Type,System.Boolean)
-        IsDefaultAttribute()
         IsDefined(System.Reflection.Assembly,System.Type)
         IsDefined(System.Reflection.Assembly,System.Type,System.Boolean)
         IsDefined(System.Reflection.Module,System.Type)
@@ -1701,8 +1684,6 @@ Summary:
         ToUInt16(System.Byte[],System.Int32)
         ToUInt32(System.Byte[],System.Int32)
         ToUInt64(System.Byte[],System.Int32)
-    System.Boolean
-        TryParse(System.String,System.Boolean&)
     System.BRECORD
     System.Buffer
         GetByte(System.Array,System.Int32)
@@ -1710,7 +1691,6 @@ Summary:
         SetByte(System.Array,System.Int32,System.Byte)
         SetByteInternal(System.Array,System.Int32,System.Int32)
     System.Byte
-        GetTypeCode()
         Parse(System.String,System.Globalization.NumberStyles)
     System.CannotUnloadAppDomainException
     System.Char
@@ -1722,15 +1702,11 @@ Summary:
         GetUnicodeCategory(System.String,System.Int32)
         IsControl(System.Char)
         IsControl(System.String,System.Int32)
-        IsDigit(System.String,System.Int32)
-        IsHighSurrogate(System.Char)
         IsHighSurrogate(System.String,System.Int32)
         IsLetter(System.String,System.Int32)
         IsLetterOrDigit(System.String,System.Int32)
         IsLower(System.String,System.Int32)
-        IsLowSurrogate(System.Char)
         IsLowSurrogate(System.String,System.Int32)
-        IsNumber(System.Char)
         IsNumber(System.String,System.Int32)
         IsPunctuation(System.Char)
         IsPunctuation(System.String,System.Int32)
@@ -1742,7 +1718,6 @@ Summary:
         IsSymbol(System.Char)
         IsSymbol(System.String,System.Int32)
         IsUpper(System.String,System.Int32)
-        ToString(System.Char)
         ToUpper(System.Char,System.Globalization.CultureInfo)
         TryParse(System.String,System.Char&)
     System.CLSCompliantAttribute
@@ -1857,35 +1832,24 @@ Summary:
         .ctor(System.Collections.Generic.ICollection`1<System.Collections.Generic.KeyValuePair`2<T,U>>)
         get_Items()
     System.Collections.Generic.Dictionary`2
-        .ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
-        .ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         .ctor(System.Int32,System.Collections.Generic.IEqualityComparer`1<TKey>)
         get_Comparer()
         get_Keys()
         pick_key(TKey,TValue)
         System.Collections.Generic.IDictionary<TKey,TValue>.get_Keys()
         System.Collections.Generic.IDictionary<TKey,TValue>.get_Values()
-        System.Collections.IDictionary.Contains(System.Object)
         System.Collections.IDictionary.get_IsFixedSize()
-        System.Collections.IDictionary.get_IsReadOnly()
         System.Collections.IDictionary.get_Keys()
         System.Collections.IDictionary.get_Values()
     System.Collections.Generic.Dictionary`2/KeyCollection
     System.Collections.Generic.Dictionary`2/ShimEnumerator
         Dispose()
     System.Collections.Generic.IDictionary`2
-        Add(TKey,TValue)
-        ContainsKey(TKey)
-        get_Item(TKey)
         get_Keys()
         get_Values()
-        Remove(TKey)
-        set_Item(TKey,TValue)
-        TryGetValue(TKey,TValue&)
     System.Collections.Generic.KeyNotFoundException
         .ctor(System.String,System.Exception)
     System.Collections.Generic.List`1
-        .ctor(System.Collections.Generic.IEnumerable`1<T>)
         .ctor(T[],System.Int32)
         BinarySearch(System.Int32,System.Int32,T,System.Collections.Generic.IComparer`1<T>)
         BinarySearch(T)
@@ -1926,37 +1890,33 @@ Summary:
         .ctor(System.Collections.IDictionary,System.Collections.IEqualityComparer)
         .ctor(System.Collections.IDictionary,System.Single)
         .ctor(System.Collections.IDictionary,System.Single,System.Collections.IEqualityComparer)
+        .ctor(System.Collections.IEqualityComparer)
         ContainsValue(System.Object)
         get_comparer()
         get_EqualityComparer()
         get_hcp()
         get_IsFixedSize()
-        get_IsReadOnly()
     System.Collections.Hashtable/Enumerator
         .ctor(System.Collections.Hashtable)
     System.Collections.Hashtable/SyncHashtable
         ContainsValue(System.Object)
         get_IsFixedSize()
-        get_IsReadOnly()
     System.Collections.IDictionary
-        Clear()
-        Contains(System.Object)
         get_IsFixedSize()
-        get_IsReadOnly()
         get_Keys()
         get_Values()
     System.Collections.ObjectModel.Collection`1
         .ctor(System.Collections.Generic.IList`1<T>)
-        get_Items()
     System.Collections.ObjectModel.KeyedCollection`2
+        ChangeItemKey(TItem,TKey)
+        get_Comparer()
+        Remove(TKey)
     System.Collections.ObjectModel.ReadOnlyCollection`1
         get_Items()
     System.Collections.Queue
-    System.Collections.ReadOnlyCollectionBase
     System.Collections.SortedList
         .ctor(System.Collections.IComparer)
         .ctor(System.Collections.IDictionary)
-        Clear()
         ContainsValue(System.Object)
         CopyToArray(System.Array,System.Int32,System.Collections.SortedList/EnumeratorMode)
         get_Keys()
@@ -2048,21 +2008,14 @@ Summary:
     System.ControlCharacters
     System.Convert
         MaxBytesPerLine
-        ChangeType(System.Object,System.Type,System.IFormatProvider)
         ChangeType(System.Object,System.TypeCode)
         ChangeType(System.Object,System.TypeCode,System.IFormatProvider)
-        ConvertFromBase(System.String,System.Int32,System.Boolean)
-        ConvertFromBase64(System.String,System.Int32,System.Boolean)
         ConvertToBase16(System.Byte[])
         ConvertToBase2(System.Byte[])
         ConvertToBase8(System.Byte[])
         EndianSwap(System.Byte[]&)
-        FromBase64CharArray(System.Char[],System.Int32,System.Int32)
         GetTypeCode(System.Object)
-        InternalFromBase64CharArray(System.Char[],System.Int32,System.Int32)
         IsDBNull(System.Object)
-        NotValidBase(System.Int32)
-        ToBase64CharArray(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)
         ToBase64CharArray(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32,System.Base64FormattingOptions)
         ToBase64String(System.Byte[],System.Base64FormattingOptions)
         ToBase64String(System.Byte[],System.Int32,System.Int32,System.Base64FormattingOptions)
@@ -2074,7 +2027,6 @@ Summary:
         ToByte(System.Byte)
         ToByte(System.DateTime)
         ToByte(System.Object)
-        ToByte(System.String,System.Int32)
         ToChar(System.Boolean)
         ToChar(System.Char)
         ToChar(System.DateTime)
@@ -2101,18 +2053,14 @@ Summary:
         ToDouble(System.String)
         ToInt16(System.DateTime)
         ToInt16(System.String)
-        ToInt16(System.String,System.Int32)
         ToInt32(System.DateTime)
         ToInt32(System.Int32)
         ToInt32(System.String)
-        ToInt32(System.String,System.Int32)
         ToInt64(System.DateTime)
-        ToInt64(System.String,System.Int32)
         ToSByte(System.DateTime)
         ToSByte(System.Object)
         ToSByte(System.SByte)
         ToSByte(System.String)
-        ToSByte(System.String,System.Int32)
         ToSingle(System.Char)
         ToSingle(System.DateTime)
         ToSingle(System.Object)
@@ -2154,16 +2102,12 @@ Summary:
         ToUInt16(System.DateTime)
         ToUInt16(System.Object)
         ToUInt16(System.String)
-        ToUInt16(System.String,System.Int32)
         ToUInt16(System.UInt16)
         ToUInt32(System.DateTime)
-        ToUInt32(System.Object)
         ToUInt32(System.String)
-        ToUInt32(System.String,System.Int32)
         ToUInt32(System.UInt32)
         ToUInt64(System.DateTime)
         ToUInt64(System.String)
-        ToUInt64(System.String,System.Int32)
         ToUInt64(System.UInt64)
     System.CrossAppDomainDelegate
     System.CurrentSystemTimeZone
@@ -2184,13 +2128,11 @@ Summary:
         UnixEpoch
         w32file_epoch
         .ctor(System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)
-        .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTimeKind)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTimeKind)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar,System.DateTimeKind)
-        AddDays(System.Double)
         AddHours(System.Double)
         AddMinutes(System.Double)
         AddMonths(System.Int32)
@@ -2200,37 +2142,13 @@ Summary:
         FromFileTime(System.Int64)
         FromFileTimeUtc(System.Int64)
         FromOADate(System.Double)
-        get_Date()
-        get_DayOfYear()
-        get_Millisecond()
-        get_TimeOfDay()
-        GetDateTimeFormats()
-        GetDateTimeFormats(System.Boolean,System.String[],System.Globalization.DateTimeFormatInfo)
         GetDateTimeFormats(System.Char)
-        GetDateTimeFormats(System.Char,System.IFormatProvider)
-        GetDateTimeFormats(System.IFormatProvider)
-        GetTypeCode()
-        IsDaylightSavingTime()
         op_Subtraction(System.DateTime,System.DateTime)
-        Parse(System.String)
         ParseExact(System.String,System.String,System.IFormatProvider)
         Subtract(System.DateTime)
-        ToBinary()
-        ToFileTime()
-        ToFileTimeUtc()
-        ToLongDateString()
-        ToLongTimeString()
-        ToOADate()
-        ToShortDateString()
-        ToShortTimeString()
-        ToString(System.String)
         TryParse(System.String,System.DateTime&)
-        TryParse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTime&)
-        TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTime&)
-        TryParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTime&)
     System.DateTimeOffset
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar,System.TimeSpan)
-        .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.TimeSpan)
         .ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.TimeSpan)
         Add(System.TimeSpan)
         AddDays(System.Double)
@@ -2238,35 +2156,18 @@ Summary:
         AddMilliseconds(System.Double)
         AddMinutes(System.Double)
         AddMonths(System.Int32)
-        AddSeconds(System.Double)
         AddTicks(System.Int64)
         AddYears(System.Int32)
         Compare(System.DateTimeOffset,System.DateTimeOffset)
-        DoParse(System.String,System.String,System.Boolean,System.DateTimeOffset&,System.Globalization.DateTimeFormatInfo,System.Globalization.DateTimeStyles)
         Equals(System.DateTimeOffset,System.DateTimeOffset)
         EqualsExact(System.DateTimeOffset)
         FromFileTime(System.Int64)
-        get_Date()
-        get_Day()
-        get_DayOfWeek()
-        get_DayOfYear()
-        get_Hour()
-        get_LocalDateTime()
-        get_Millisecond()
-        get_Minute()
-        get_Month()
         get_Now()
-        get_Second()
-        get_Ticks()
-        get_TimeOfDay()
         get_UtcNow()
-        get_UtcTicks()
-        get_Year()
         op_Addition(System.DateTimeOffset,System.TimeSpan)
         op_Equality(System.DateTimeOffset,System.DateTimeOffset)
         op_GreaterThan(System.DateTimeOffset,System.DateTimeOffset)
         op_GreaterThanOrEqual(System.DateTimeOffset,System.DateTimeOffset)
-        op_Implicit(System.DateTime)
         op_Inequality(System.DateTimeOffset,System.DateTimeOffset)
         op_LessThan(System.DateTimeOffset,System.DateTimeOffset)
         op_LessThanOrEqual(System.DateTimeOffset,System.DateTimeOffset)
@@ -2274,29 +2175,14 @@ Summary:
         op_Subtraction(System.DateTimeOffset,System.TimeSpan)
         Parse(System.String)
         Parse(System.String,System.IFormatProvider)
-        Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-        ParseChar(System.String,System.Int32,System.Char,System.Boolean,System.Int32&)
-        ParseEnum(System.String,System.Int32,System.String[],System.Boolean,System.Int32&)
         ParseExact(System.String,System.String,System.IFormatProvider)
-        ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)
-        ParseExact(System.String,System.String[],System.Globalization.DateTimeFormatInfo,System.Globalization.DateTimeStyles,System.DateTimeOffset&)
-        ParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)
-        ParseNumber(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32&)
-        ParseNumber(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32&,System.Int32&)
         Subtract(System.DateTimeOffset)
         Subtract(System.TimeSpan)
-        ToFileTime()
-        ToLocalTime()
         ToOffset(System.TimeSpan)
         ToString(System.IFormatProvider)
         ToString(System.String)
-        ToUniversalTime()
         TryParse(System.String,System.DateTimeOffset&)
-        TryParse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset&)
-        TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset&)
         TryParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset&)
-    System.DBNull
-        GetTypeCode()
     System.Decimal
         DECIMAL_DIVIDE_BY_ZERO
         iMAX_SCALE
@@ -2305,20 +2191,16 @@ Summary:
         SCALE_MASK
         SCALE_SHIFT
         SIGN_FLAG
-        Zero
         .ctor(System.Int32[])
         Ceiling(System.Decimal)
         decimal2string(System.Decimal&,System.Int32,System.Int32,System.Char[],System.Int32,System.Int32&,System.Int32&)
         decimalIntDiv(System.Decimal&,System.Decimal&,System.Decimal&)
         FromOACurrency(System.Int64)
-        GetTypeCode()
-        IsNegative()
         Negate(System.Decimal)
         op_Addition(System.Decimal,System.Decimal)
         op_Decrement(System.Decimal)
         op_Explicit(System.Decimal)
         op_GreaterThanOrEqual(System.Decimal,System.Decimal)
-        op_Implicit(System.Char)
         op_LessThanOrEqual(System.Decimal,System.Decimal)
         op_Modulus(System.Decimal,System.Decimal)
         op_UnaryNegation(System.Decimal)
@@ -2344,7 +2226,6 @@ Summary:
         ToUInt64(System.Decimal)
         Truncate(System.Decimal)
         TryParse(System.String,System.Decimal&)
-        TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Decimal&)
     System.Delegate
         .ctor(System.Object,System.String)
         .ctor(System.Type,System.String)
@@ -2447,18 +2328,15 @@ Summary:
         .ctor(System.String)
         .ctor(System.String,System.Exception)
     System.Double
-        GetTypeCode()
         Parse(System.String,System.Globalization.NumberStyles)
         ToString(System.String)
         TryParse(System.String,System.Double&)
-        TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Double&)
     System.DuplicateWaitObjectException
     System.EntryPointNotFoundException
         .ctor(System.String)
         .ctor(System.String,System.Exception)
     System.Enum
         GetNames(System.Type)
-        GetValues(System.Type)
         Parse(System.Type,System.String)
     System.Environment
         Exit(System.Int32)
@@ -2472,7 +2350,6 @@ Summary:
         get_MachineName()
         get_ProcessorCount()
         get_StackTrace()
-        get_TickCount()
         get_UnityWebSecurityEnabled()
         get_UserDomainName()
         get_UserInteractive()
@@ -2494,7 +2371,6 @@ Summary:
         SetEnvironmentVariable(System.String,System.String)
         SetEnvironmentVariable(System.String,System.String,System.EnvironmentVariableTarget)
     System.EnvironmentVariableTarget
-    System.EventHandler`1
     System.Exception
         FixRemotingException()
         get_Data()
@@ -2509,8 +2385,6 @@ Summary:
         .ctor(System.String,System.Exception)
     System.FieldAccessException
         Result
-        .ctor(System.String,System.Exception)
-    System.FormatException
         .ctor(System.String,System.Exception)
     System.GC
         AddMemoryPressure(System.Int64)
@@ -2668,15 +2542,12 @@ Summary:
         LastIndexOf(System.String,System.String,System.Int32)
         LastIndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
     System.Globalization.CultureInfo
-        .ctor(System.String)
-        .ctor(System.String,System.Boolean)
         ClearCachedData()
         construct_internal_locale_from_specific_name(System.Globalization.CultureInfo,System.String)
         ConstructCalendars()
         ConstructInternalLocaleFromSpecificName(System.Globalization.CultureInfo,System.String)
         CreateSpecificCulture(System.String)
         get_Calendar()
-        get_DisplayName()
         get_EnglishName()
         get_InstalledUICulture()
         get_NativeName()
@@ -2690,22 +2561,15 @@ Summary:
         GetCultureInfo(System.String)
         GetCultureInfo(System.String,System.String)
         GetCultureInfoByIetfLanguageTag(System.String)
-        GetCultures(System.Globalization.CultureTypes)
         insert_into_shared_tables(System.Globalization.CultureInfo)
-        internal_get_cultures(System.Boolean,System.Boolean,System.Boolean)
         internal_is_lcid_neutral(System.Int32,System.Boolean&)
         IsIDNeutralCulture(System.Int32)
         ReadOnly(System.Globalization.CultureInfo)
-    System.Globalization.CultureTypes
     System.Globalization.DateTimeFormatInfo
-        get_AbbreviatedDayNames()
         get_AbbreviatedMonthGenitiveNames()
-        get_AbbreviatedMonthNames()
         get_CalendarWeekRule()
-        get_DayNames()
         get_FirstDayOfWeek()
         get_MonthGenitiveNames()
-        get_MonthNames()
         get_NativeCalendarName()
         get_ShortestDayNames()
         GetAbbreviatedEraName(System.Int32)
@@ -2833,20 +2697,16 @@ Summary:
     System.Guid
         .ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
         op_Inequality(System.Guid,System.Guid)
-        ToByteArray()
     System.IAppDomainSetup
     System.IAsyncResult
         get_CompletedSynchronously()
     System.IConsoleDriver
-    System.IConvertible
-        GetTypeCode()
     System.IndexOutOfRangeException
         .ctor(System.String,System.Exception)
     System.InsufficientMemoryException
     System.Int16
         MaxValue
         MinValue
-        GetTypeCode()
         Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
         TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Int16&)
@@ -2855,7 +2715,6 @@ Summary:
     System.Int64
         MaxValue
         MinValue
-        GetTypeCode()
         Parse(System.String,System.Globalization.NumberStyles)
     System.IntPtr
         op_Explicit(System.IntPtr)
@@ -3115,7 +2974,6 @@ Summary:
         .ctor(System.String,System.Boolean)
         .ctor(System.String,System.Text.Encoding)
         .ctor(System.String,System.Text.Encoding,System.Boolean)
-        Close()
         DataAvailable()
         DiscardBufferedData()
         get_BaseStream()
@@ -3136,11 +2994,10 @@ Summary:
         get_AutoFlush()
         get_BaseStream()
         get_Encoding()
-    System.IO.StringReader
-        Close()
     System.IO.StringWriter
+        get_Encoding()
+        GetStringBuilder()
     System.IO.SynchronizedReader
-        Close()
         ReadBlock(System.Char[],System.Int32,System.Int32)
     System.IO.SynchronizedWriter
         .ctor(System.IO.TextWriter)
@@ -3177,10 +3034,8 @@ Summary:
         WriteLine(System.UInt32)
         WriteLine(System.UInt64)
     System.IO.TextReader
-        Close()
         ReadBlock(System.Char[],System.Int32,System.Int32)
     System.IO.TextWriter
-        internalFormatProvider
         .ctor(System.IFormatProvider)
         get_Encoding()
         get_FormatProvider()
@@ -3245,7 +3100,6 @@ Summary:
         Initialize(System.Byte*,System.Int64,System.Int64,System.IO.FileAccess)
         remove_Closed(System.EventHandler)
         set_PositionPointer(System.Byte*)
-    System.IServiceProvider
     System.KnownTerminals
     System.LoaderOptimizationAttribute
     System.MarshalByRefObject
@@ -3259,7 +3113,6 @@ Summary:
         E
         PI
         Abs(System.Decimal)
-        Abs(System.Double)
         Abs(System.Int16)
         Abs(System.SByte)
         Acos(System.Double)
@@ -3345,19 +3198,14 @@ Summary:
         .ctor(System.Object)
         get_DeclaringMethod()
         get_GUID()
-        GetArrayRank()
         GetConstructor(System.Reflection.ConstructorInfo)
         GetCorrespondingInflatedConstructor(System.Reflection.ConstructorInfo)
         GetCorrespondingInflatedMethod(System.Reflection.MethodInfo)
-        GetEvents(System.Reflection.BindingFlags)
-        GetEvents_internal(System.Reflection.BindingFlags,System.Type)
         GetField(System.Reflection.FieldInfo)
         GetInterface(System.String,System.Boolean)
         GetMembers(System.Reflection.BindingFlags)
         GetMethod(System.Reflection.MethodInfo)
         GetNestedType(System.String,System.Reflection.BindingFlags)
-        GetNestedTypes(System.Reflection.BindingFlags)
-        GetProperties(System.Reflection.BindingFlags)
         IsCOMObjectImpl()
         type_from_obj(System.MonoType,System.Object)
     System.MTAThreadAttribute
@@ -3376,10 +3224,10 @@ Summary:
     System.NotSupportedException
         .ctor(System.String,System.Exception)
     System.Nullable
+        Compare<T>(System.Nullable`1<T>,System.Nullable`1<T>)
+        Equals<T>(System.Nullable`1<T>,System.Nullable`1<T>)
     System.Nullable`1
         Box(System.Nullable`1<T>)
-        GetValueOrDefault()
-        GetValueOrDefault(T)
         op_Explicit(System.Nullable`1<T>)
         op_Implicit(T)
         Unbox(System.Object)
@@ -3457,7 +3305,6 @@ Summary:
         get_ReflectionOnly()
         GetAssembly(System.Type)
         GetCallingAssembly()
-        GetCustomAttributes(System.Boolean)
         GetEntryAssembly()
         GetExportedTypes()
         GetFile(System.String)
@@ -3519,6 +3366,7 @@ Summary:
     System.Reflection.AssemblyCopyrightAttribute
         get_Copyright()
     System.Reflection.AssemblyCultureAttribute
+        get_Culture()
     System.Reflection.AssemblyDefaultAliasAttribute
         get_DefaultAlias()
     System.Reflection.AssemblyDelaySignAttribute
@@ -3564,6 +3412,7 @@ Summary:
     System.Reflection.AssemblyTrademarkAttribute
         get_Trademark()
     System.Reflection.AssemblyVersionAttribute
+        get_Version()
     System.Reflection.Binder
         BindToField(System.Reflection.BindingFlags,System.Reflection.FieldInfo[],System.Object,System.Globalization.CultureInfo)
     System.Reflection.Binder/Default
@@ -3691,13 +3540,10 @@ Summary:
         get_GenericParameterAttributes()
         get_GUID()
         get_StructLayoutAttribute()
-        GetEvents(System.Reflection.BindingFlags)
         GetInterface(System.String,System.Boolean)
         GetInterfaceMap(System.Type)
         GetMembers(System.Reflection.BindingFlags)
         GetNestedType(System.String,System.Reflection.BindingFlags)
-        GetNestedTypes(System.Reflection.BindingFlags)
-        GetProperties(System.Reflection.BindingFlags)
         IsCOMObjectImpl()
         MakeArrayType()
         MakeArrayType(System.Int32)
@@ -3733,14 +3579,10 @@ Summary:
         get_TypeToken()
         get_UnderlyingField()
         GetEvents()
-        GetEvents(System.Reflection.BindingFlags)
         GetInterface(System.String,System.Boolean)
         GetInterfaceMap(System.Type)
-        GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
         GetMembers(System.Reflection.BindingFlags)
         GetNestedType(System.String,System.Reflection.BindingFlags)
-        GetNestedTypes(System.Reflection.BindingFlags)
-        GetProperties(System.Reflection.BindingFlags)
         GetTypeBuilder()
         IsCOMObjectImpl()
         MakeArrayType()
@@ -3792,15 +3634,11 @@ Summary:
         get_GenericParameterPosition()
         get_GUID()
         GetEvents()
-        GetEvents(System.Reflection.BindingFlags)
         GetGenericParameterConstraints()
         GetInterface(System.String,System.Boolean)
         GetInterfaceMap(System.Type)
-        GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
         GetMembers(System.Reflection.BindingFlags)
         GetNestedType(System.String,System.Reflection.BindingFlags)
-        GetNestedTypes(System.Reflection.BindingFlags)
-        GetProperties(System.Reflection.BindingFlags)
         initialize()
         IsCOMObjectImpl()
         MakeArrayType()
@@ -4046,6 +3884,26 @@ Summary:
     System.Reflection.Emit.ParameterToken
     System.Reflection.Emit.PointerType
     System.Reflection.Emit.PropertyBuilder
+        cattrs
+        def_value
+        parameters
+        paramModOpt
+        paramModReq
+        returnModOpt
+        returnModReq
+        table_idx
+        .ctor(System.Reflection.Emit.TypeBuilder,System.String,System.Reflection.PropertyAttributes,System.Type,System.Type[],System.Type[],System.Type[],System.Type[][],System.Type[][])
+        AddOtherMethod(System.Reflection.Emit.MethodBuilder)
+        get_PropertyToken()
+        SetConstant(System.Object)
+        SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])
+        SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
+        SetGetMethod(System.Reflection.Emit.MethodBuilder)
+        SetSetMethod(System.Reflection.Emit.MethodBuilder)
+        System.Runtime.InteropServices._PropertyBuilder.GetIDsOfNames(System.Guid&,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)
+        System.Runtime.InteropServices._PropertyBuilder.GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)
+        System.Runtime.InteropServices._PropertyBuilder.GetTypeInfoCount(System.UInt32&)
+        System.Runtime.InteropServices._PropertyBuilder.Invoke(System.UInt32,System.Guid&,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
     System.Reflection.Emit.PropertyOnTypeBuilderInst
     System.Reflection.Emit.PropertyToken
     System.Reflection.Emit.RefEmitPermissionSet
@@ -4066,8 +3924,6 @@ Summary:
         num_fields
         packing_size
         permissions
-        properties
-        subtypes
         UnspecifiedTypeSize
         .ctor(System.Reflection.Emit.ModuleBuilder,System.String,System.Reflection.TypeAttributes,System.Type,System.Type[],System.Reflection.Emit.PackingSize,System.Int32,System.Type)
         AddDeclarativeSecurity(System.Security.Permissions.SecurityAction,System.Security.PermissionSet)
@@ -4111,18 +3967,14 @@ Summary:
         get_TypeToken()
         GetConstructor(System.Type,System.Reflection.ConstructorInfo)
         GetEvents()
-        GetEvents(System.Reflection.BindingFlags)
         GetEvents_internal(System.Reflection.BindingFlags)
         GetField(System.Type,System.Reflection.FieldInfo)
         GetFullName()
         GetInterface(System.String,System.Boolean)
         GetInterfaceMap(System.Type)
-        GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
         GetMembers(System.Reflection.BindingFlags)
         GetMethod(System.Type,System.Reflection.MethodInfo)
         GetNestedType(System.String,System.Reflection.BindingFlags)
-        GetNestedTypes(System.Reflection.BindingFlags)
-        GetProperties(System.Reflection.BindingFlags)
         IsCOMObjectImpl()
         IsCreated()
         IsValidGetMethodType(System.Type)
@@ -4182,10 +4034,7 @@ Summary:
         get_IsFamily()
         get_IsFamilyAndAssembly()
         get_IsFamilyOrAssembly()
-        get_IsInitOnly()
         get_IsPinvokeImpl()
-        get_IsPrivate()
-        get_IsPublic()
         get_IsSpecialName()
         GetFieldFromHandle(System.RuntimeFieldHandle,System.RuntimeTypeHandle)
         GetOptionalCustomModifiers()
@@ -4202,8 +4051,6 @@ Summary:
     System.Reflection.GenericParameterAttributes
     System.Reflection.Getter`2
     System.Reflection.GetterAdapter
-    System.Reflection.ICustomAttributeProvider
-        GetCustomAttributes(System.Boolean)
     System.Reflection.ImageFileMachine
     System.Reflection.InterfaceMapping
     System.Reflection.InvalidFilterCriteriaException
@@ -4269,7 +4116,6 @@ Summary:
         get_ModuleHandle()
         get_ModuleVersionId()
         get_MvId()
-        GetCustomAttributes(System.Boolean)
         GetField(System.String)
         GetField(System.String,System.Reflection.BindingFlags)
         GetFields()
@@ -4343,7 +4189,6 @@ Summary:
         get_IsLcid()
         get_MetadataToken()
         get_RawDefaultValue()
-        GetCustomAttributes(System.Boolean)
         GetMetadataToken()
         GetOptionalCustomModifiers()
         GetRequiredCustomModifiers()
@@ -4363,9 +4208,7 @@ Summary:
         get_IsSpecialName()
         GetAccessors()
         GetConstantValue()
-        GetGetMethod()
         GetRawConstantValue()
-        GetSetMethod()
         System.Runtime.InteropServices._PropertyInfo.GetIDsOfNames(System.Guid&,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)
         System.Runtime.InteropServices._PropertyInfo.GetType()
         System.Runtime.InteropServices._PropertyInfo.GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)
@@ -4470,7 +4313,6 @@ Summary:
     System.Runtime.CompilerServices.CallConvStdcall
     System.Runtime.CompilerServices.CallConvThiscall
     System.Runtime.CompilerServices.CompilationRelaxationsAttribute
-        .ctor(System.Int32)
         get_CompilationRelaxations()
     System.Runtime.CompilerServices.CompilerGlobalScopeAttribute
     System.Runtime.CompilerServices.CompilerMarshalOverride
@@ -4513,7 +4355,6 @@ Summary:
     System.Runtime.CompilerServices.RuntimeHelpers
         Equals(System.Object,System.Object)
         ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers/TryCode,System.Runtime.CompilerServices.RuntimeHelpers/CleanupCode,System.Object)
-        GetHashCode(System.Object)
         GetObjectValue(System.Object)
         PrepareConstrainedRegions()
         PrepareConstrainedRegionsNoOP()
@@ -4872,6 +4713,10 @@ Summary:
         GetTypeInfoCount(System.UInt32&)
         Invoke(System.UInt32,System.Guid&,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
     System.Runtime.InteropServices._PropertyBuilder
+        GetIDsOfNames(System.Guid&,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)
+        GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)
+        GetTypeInfoCount(System.UInt32&)
+        Invoke(System.UInt32,System.Guid&,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)
     System.Runtime.InteropServices._PropertyInfo
         Equals(System.Object)
         get_Attributes()
@@ -5043,6 +4888,10 @@ Summary:
     System.Runtime.InteropServices.CoClassAttribute
     System.Runtime.InteropServices.ComAliasNameAttribute
     System.Runtime.InteropServices.ComCompatibleVersionAttribute
+        get_BuildNumber()
+        get_MajorVersion()
+        get_MinorVersion()
+        get_RevisionNumber()
     System.Runtime.InteropServices.ComConversionLossAttribute
     System.Runtime.InteropServices.ComDefaultInterfaceAttribute
         get_Value()
@@ -5718,12 +5567,9 @@ Summary:
     System.Runtime.Remoting.Messaging.MethodCallMessageWrapper
     System.Runtime.Remoting.Messaging.MethodDictionary
         .ctor(System.String[])
-        Clear()
-        Contains(System.Object)
         get_HasInternalProperties()
         get_InternalProperties()
         get_IsFixedSize()
-        get_IsReadOnly()
         get_Keys()
         get_MethodKeys()
     System.Runtime.Remoting.Messaging.MethodResponse
@@ -6037,7 +5883,6 @@ Summary:
         ToSByte(System.Object)
         ToSingle(System.Object)
         ToUInt16(System.Object)
-        ToUInt32(System.Object)
         ToUInt64(System.Object)
     System.Runtime.Serialization.Formatters.Binary.ArrayStructure
     System.Runtime.Serialization.Formatters.Binary.BinaryCommon
@@ -6114,7 +5959,6 @@ Summary:
         ToSByte(System.Object)
         ToSingle(System.Object)
         ToUInt16(System.Object)
-        ToUInt32(System.Object)
         ToUInt64(System.Object)
     System.Runtime.Serialization.ISerializationSurrogate
         GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
@@ -6155,7 +5999,6 @@ Summary:
         AddValue(System.String,System.Double)
         AddValue(System.String,System.SByte)
         AddValue(System.String,System.UInt16)
-        AddValue(System.String,System.UInt32)
         get_AssemblyName()
         get_entries()
         get_FullTypeName()
@@ -6168,15 +6011,12 @@ Summary:
         GetSByte(System.String)
         GetSingle(System.String)
         GetUInt16(System.String)
-        GetUInt32(System.String)
         GetUInt64(System.String)
         set_AssemblyName(System.String)
         set_FullTypeName(System.String)
     System.Runtime.Serialization.SerializationInfoEnumerator
         get_ObjectType()
     System.Runtime.Serialization.SerializationObjectManager
-    System.Runtime.Serialization.StreamingContext
-        get_Context()
     System.Runtime.Serialization.SurrogateSelector
     System.Runtime.Versioning.ResourceConsumptionAttribute
     System.Runtime.Versioning.ResourceExposureAttribute
@@ -6204,7 +6044,6 @@ Summary:
     System.SByte
         MaxValue
         MinValue
-        GetTypeCode()
         Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
         TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.SByte&)
@@ -6277,11 +6116,9 @@ Summary:
         CheckAssert(System.Security.CodeAccessPermission)
         CheckDemand(System.Security.CodeAccessPermission)
         CheckDeny(System.Security.CodeAccessPermission)
-        CheckPermissionState(System.Security.Permissions.PermissionState,System.Boolean)
         CheckPermitOnly(System.Security.CodeAccessPermission)
         CheckSecurityElement(System.Security.SecurityElement,System.String,System.Int32,System.Int32)
         Copy()
-        Demand()
         Deny()
         FromXml(System.Security.SecurityElement)
         Intersect(System.Security.IPermission)
@@ -6706,7 +6543,6 @@ Summary:
     System.Security.Permissions.KeyContainerPermissionAttribute
     System.Security.Permissions.KeyContainerPermissionFlags
     System.Security.Permissions.PermissionSetAttribute
-    System.Security.Permissions.PermissionState
     System.Security.Permissions.PrincipalPermission
     System.Security.Permissions.PrincipalPermissionAttribute
     System.Security.Permissions.PublisherIdentityPermission
@@ -6729,7 +6565,6 @@ Summary:
         set_Unrestricted(System.Boolean)
     System.Security.Permissions.SecurityPermission
         version
-        .ctor(System.Security.Permissions.PermissionState)
         Copy()
         FromXml(System.Security.SecurityElement)
         get_Flags()
@@ -6980,7 +6815,6 @@ Summary:
         SuppressFlow()
         SuppressFlowWindowsIdentity()
     System.Security.SecurityCriticalAttribute
-        .ctor(System.Security.SecurityCriticalScope)
         get_Scope()
     System.Security.SecurityElement
         .ctor(System.Security.SecurityElement)
@@ -7085,9 +6919,7 @@ Summary:
     System.Security.VerificationException
     System.Security.XmlSyntaxException
     System.Single
-        Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
-        Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
         ToString(System.String)
         TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Single&)
         TryParse(System.String,System.Single&)
@@ -7100,22 +6932,17 @@ Summary:
         .ctor(System.SByte*,System.Int32,System.Int32)
         .ctor(System.SByte*,System.Int32,System.Int32,System.Text.Encoding)
         Compare(System.String,System.Int32,System.String,System.Int32,System.Int32)
-        Compare(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Boolean)
         Compare(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CultureInfo,System.Globalization.CompareOptions)
         Compare(System.String,System.Int32,System.String,System.Int32,System.Int32,System.StringComparison)
         Compare(System.String,System.String,System.Globalization.CultureInfo,System.Globalization.CompareOptions)
-        Compare(System.String,System.String,System.StringComparison)
         CompareOrdinal(System.String,System.String)
         CompareOrdinalCaseInsensitive(System.String,System.Int32,System.String,System.Int32,System.Int32)
         Concat(System.Object)
         Concat(System.Object,System.Object,System.Object,System.Object)
         Copy(System.String)
         EndsWith(System.String,System.Boolean,System.Globalization.CultureInfo)
-        EndsWith(System.String,System.StringComparison)
-        Equals(System.String,System.String,System.StringComparison)
         Equals(System.String,System.StringComparison)
         GetEnumerator()
-        GetTypeCode()
         IndexOf(System.String,System.Int32,System.StringComparison)
         IndexOfOrdinalIgnoreCase(System.Char,System.Int32,System.Int32)
         Intern(System.String)
@@ -7142,7 +6969,6 @@ Summary:
         Remove(System.Int32)
         Split(System.Char[],System.StringSplitOptions)
         StartsWith(System.String,System.Boolean,System.Globalization.CultureInfo)
-        StartsWith(System.String,System.StringComparison)
         ToUpper()
         ToUpper(System.Globalization.CultureInfo)
         ToUpperInvariant()
@@ -7151,7 +6977,6 @@ Summary:
         get_CurrentCulture()
         get_CurrentCultureIgnoreCase()
         get_InvariantCulture()
-        get_Ordinal()
     System.SystemException
         Result
     System.TermInfoBooleans
@@ -7233,7 +7058,6 @@ Summary:
         GetCharCount(System.Byte*,System.Int32)
         GetCharCount(System.Byte[])
         GetChars(System.Byte*,System.Int32,System.Char*,System.Int32)
-        GetChars(System.Byte[])
         GetEncoder()
         GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)
         GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)
@@ -7357,7 +7181,6 @@ Summary:
         CompareExchange(System.Double&,System.Double,System.Double)
         CompareExchange(System.Int64&,System.Int64,System.Int64)
         CompareExchange(System.IntPtr&,System.IntPtr,System.IntPtr)
-        CompareExchange(System.Object&,System.Object,System.Object)
         Decrement(System.Int32&)
         Decrement(System.Int64&)
         Exchange(System.Double&,System.Double)
@@ -7448,7 +7271,6 @@ Summary:
         Join(System.Int32)
         Join(System.TimeSpan)
         Join_internal(System.Int32,System.IntPtr)
-        MemoryBarrier()
         ResetAbort()
         ResetAbort_internal()
         Resume()
@@ -7574,15 +7396,12 @@ Summary:
         FromTicks(System.Int64)
         op_UnaryNegation(System.TimeSpan)
         op_UnaryPlus(System.TimeSpan)
-        Parse(System.String)
         TryParse(System.String,System.TimeSpan&)
-    System.TimeSpan/Parser
     System.TimeZone
         get_DaylightName()
         get_StandardName()
     System.Type
         FindInterfaces(System.Reflection.TypeFilter,System.Object)
-        FindMembers(System.Reflection.MemberTypes,System.Reflection.BindingFlags,System.Reflection.MemberFilter,System.Object)
         get_DeclaringMethod()
         get_DefaultBinder()
         get_GenericParameterAttributes()
@@ -7608,15 +7427,11 @@ Summary:
         get_IsVisible()
         get_StructLayoutAttribute()
         get_TypeInitializer()
-        GetArrayRank()
         GetConstructor(System.Reflection.ConstructorInfo)
-        GetConstructors()
         GetDefaultMembers()
         GetEvent(System.String)
         GetEvents()
-        GetEvents(System.Reflection.BindingFlags)
         GetField(System.Reflection.FieldInfo)
-        GetFields()
         GetGenericParameterAttributes()
         GetGenericParameterConstraints()
         GetGenericParameterConstraints_impl()
@@ -7626,8 +7441,6 @@ Summary:
         GetInterfaceMap(System.Type)
         GetInterfaceMapData(System.Type,System.Type,System.Reflection.MethodInfo[]&,System.Reflection.MethodInfo[]&)
         GetMember(System.String)
-        GetMember(System.String,System.Reflection.BindingFlags)
-        GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)
         GetMembers()
         GetMembers(System.Reflection.BindingFlags)
         GetMethod(System.Reflection.MethodInfo)
@@ -7637,11 +7450,8 @@ Summary:
         GetNestedType(System.String)
         GetNestedType(System.String,System.Reflection.BindingFlags)
         GetNestedTypes()
-        GetNestedTypes(System.Reflection.BindingFlags)
         GetPacking(System.Int32&,System.Int32&)
         GetProperties()
-        GetProperties(System.Reflection.BindingFlags)
-        GetProperty(System.String)
         GetProperty(System.String,System.Type,System.Type[],System.Reflection.ParameterModifier[])
         GetProperty(System.String,System.Type[])
         GetPropertyImplInternal(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])
@@ -7682,19 +7492,16 @@ Summary:
         get_TypeName()
     System.TypeUnloadedException
     System.UInt16
-        GetTypeCode()
         Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
     System.UInt32
         MaxValue
         MinValue
-        GetTypeCode()
         Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
     System.UInt64
         MaxValue
         MinValue
-        GetTypeCode()
         Parse(System.String)
         Parse(System.String,System.Globalization.NumberStyles)
         TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.UInt64&)
@@ -7715,19 +7522,523 @@ Summary:
     System.WeakReference
         set_Target(System.Object)
 ---------------------------------------------------
+Assembly: Newtonsoft.Json
+---------------------------------------------------
+Summary:
+  Total Type Removals = 19
+    Nested = 4
+    Interfaces = 0
+    Abstract Classes = 2
+    Generic Types = 4
+    Generic Interfaces = 0
+    Generic Abstract Classes = 1
+    Attributes = 0
+  Total Field Removals = 57
+  Total Method Removals = 352
+  References Removed = 0
+---------------------------------------------------
+    Newtonsoft.Json.Bson.Dummy
+    Newtonsoft.Json.Converters.BinaryConverter
+        BinaryToArrayName
+        BinaryTypeName
+    Newtonsoft.Json.Converters.CustomCreationConverter`1
+    Newtonsoft.Json.Converters.DateTimeConverterBase
+    Newtonsoft.Json.Converters.IsoDateTimeConverter
+    Newtonsoft.Json.Converters.JavaScriptDateTimeConverter
+    Newtonsoft.Json.Converters.KeyValuePairConverter
+        KeyName
+        ValueName
+    Newtonsoft.Json.Converters.RegexConverter
+        OptionsName
+        PatternName
+        HasFlag(System.Text.RegularExpressions.RegexOptions,System.Text.RegularExpressions.RegexOptions)
+    Newtonsoft.Json.Converters.StringEnumConverter
+    Newtonsoft.Json.Converters.VersionConverter
+    Newtonsoft.Json.JsonArrayAttribute
+        _allowNullItems
+        .ctor()
+        .ctor(System.Boolean)
+        .ctor(System.String)
+        get_AllowNullItems()
+        set_AllowNullItems(System.Boolean)
+    Newtonsoft.Json.JsonConstructorAttribute
+        .ctor()
+    Newtonsoft.Json.JsonContainerAttribute
+        <Description>k__BackingField
+        <Id>k__BackingField
+        <Title>k__BackingField
+        .ctor()
+        .ctor(System.String)
+        get_Description()
+        get_Id()
+        get_IsReference()
+        get_ItemIsReference()
+        get_ItemReferenceLoopHandling()
+        get_ItemTypeNameHandling()
+        get_Title()
+        set_Description(System.String)
+        set_Id(System.String)
+        set_IsReference(System.Boolean)
+        set_ItemConverterParameters(System.Object[])
+        set_ItemConverterType(System.Type)
+        set_ItemIsReference(System.Boolean)
+        set_ItemReferenceLoopHandling(Newtonsoft.Json.ReferenceLoopHandling)
+        set_ItemTypeNameHandling(Newtonsoft.Json.TypeNameHandling)
+        set_NamingStrategyParameters(System.Object[])
+        set_NamingStrategyType(System.Type)
+        set_Title(System.String)
+    Newtonsoft.Json.JsonConvert
+        DeserializeAnonymousType<T>(System.String,T)
+        DeserializeAnonymousType<T>(System.String,T,Newtonsoft.Json.JsonSerializerSettings)
+        DeserializeObject(System.String)
+        DeserializeObject(System.String,Newtonsoft.Json.JsonSerializerSettings)
+        DeserializeObject(System.String,System.Type)
+        DeserializeObject(System.String,System.Type,Newtonsoft.Json.JsonConverter[])
+        DeserializeObject<T>(System.String,Newtonsoft.Json.JsonConverter[])
+        PopulateObject(System.String,System.Object)
+        PopulateObject(System.String,System.Object,Newtonsoft.Json.JsonSerializerSettings)
+        SerializeObject(System.Object,Newtonsoft.Json.Formatting)
+        SerializeObject(System.Object,Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonConverter[])
+        SerializeObject(System.Object,Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonSerializerSettings)
+        SerializeObject(System.Object,Newtonsoft.Json.JsonConverter[])
+        SerializeObject(System.Object,Newtonsoft.Json.JsonSerializerSettings)
+        SerializeObject(System.Object,System.Type,Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonSerializerSettings)
+        set_DefaultSettings(System.Func`1<Newtonsoft.Json.JsonSerializerSettings>)
+        ToString(System.Byte)
+        ToString(System.DateTime)
+        ToString(System.DateTime,Newtonsoft.Json.DateFormatHandling,Newtonsoft.Json.DateTimeZoneHandling)
+        ToString(System.DateTimeOffset)
+        ToString(System.DateTimeOffset,Newtonsoft.Json.DateFormatHandling)
+        ToString(System.Double)
+        ToString(System.Enum)
+        ToString(System.Guid)
+        ToString(System.Guid,System.Char)
+        ToString(System.Int16)
+        ToString(System.Int32)
+        ToString(System.Int64)
+        ToString(System.Object)
+        ToString(System.SByte)
+        ToString(System.Single)
+        ToString(System.TimeSpan)
+        ToString(System.TimeSpan,System.Char)
+        ToString(System.UInt16)
+        ToString(System.UInt32)
+        ToString(System.UInt64)
+        ToString(System.Uri)
+        ToString(System.Uri,System.Char)
+    Newtonsoft.Json.JsonConverterAttribute
+        .ctor(System.Type)
+        .ctor(System.Type,System.Object[])
+        set_ConverterParameters(System.Object[])
+    Newtonsoft.Json.JsonDictionaryAttribute
+        .ctor()
+        .ctor(System.String)
+    Newtonsoft.Json.JsonException
+        Create(Newtonsoft.Json.IJsonLineInfo,System.String,System.String)
+    Newtonsoft.Json.JsonExtensionDataAttribute
+        .ctor()
+        set_ReadData(System.Boolean)
+        set_WriteData(System.Boolean)
+    Newtonsoft.Json.JsonIgnoreAttribute
+        .ctor()
+    Newtonsoft.Json.JsonObjectAttribute
+        .ctor()
+        .ctor(Newtonsoft.Json.MemberSerialization)
+        .ctor(System.String)
+        get_ItemRequired()
+        set_ItemRequired(Newtonsoft.Json.Required)
+        set_MemberSerialization(Newtonsoft.Json.MemberSerialization)
+    Newtonsoft.Json.JsonPropertyAttribute
+        .ctor()
+        .ctor(System.String)
+        get_DefaultValueHandling()
+        get_IsReference()
+        get_ItemIsReference()
+        get_ItemReferenceLoopHandling()
+        get_ItemTypeNameHandling()
+        get_NullValueHandling()
+        get_ObjectCreationHandling()
+        get_Order()
+        get_ReferenceLoopHandling()
+        get_Required()
+        get_TypeNameHandling()
+        set_DefaultValueHandling(Newtonsoft.Json.DefaultValueHandling)
+        set_IsReference(System.Boolean)
+        set_ItemConverterParameters(System.Object[])
+        set_ItemConverterType(System.Type)
+        set_ItemIsReference(System.Boolean)
+        set_ItemReferenceLoopHandling(Newtonsoft.Json.ReferenceLoopHandling)
+        set_ItemTypeNameHandling(Newtonsoft.Json.TypeNameHandling)
+        set_NamingStrategyParameters(System.Object[])
+        set_NamingStrategyType(System.Type)
+        set_NullValueHandling(Newtonsoft.Json.NullValueHandling)
+        set_ObjectCreationHandling(Newtonsoft.Json.ObjectCreationHandling)
+        set_Order(System.Int32)
+        set_PropertyName(System.String)
+        set_ReferenceLoopHandling(Newtonsoft.Json.ReferenceLoopHandling)
+        set_Required(Newtonsoft.Json.Required)
+        set_TypeNameHandling(Newtonsoft.Json.TypeNameHandling)
+    Newtonsoft.Json.JsonReader
+        get_QuoteChar()
+        set_QuoteChar(System.Char)
+        set_SupportMultipleContent(System.Boolean)
+    Newtonsoft.Json.JsonReaderException
+        .ctor(System.String)
+        .ctor(System.String,System.Exception)
+        get_LineNumber()
+        get_LinePosition()
+        get_Path()
+    Newtonsoft.Json.JsonRequiredAttribute
+        .ctor()
+    Newtonsoft.Json.JsonSerializer
+        Deserialize(Newtonsoft.Json.JsonReader)
+        Deserialize(System.IO.TextReader,System.Type)
+        get_Binder()
+        get_ConstructorHandling()
+        get_Culture()
+        get_DateFormatHandling()
+        get_DateFormatString()
+        get_DateParseHandling()
+        get_DateTimeZoneHandling()
+        get_DefaultValueHandling()
+        get_EqualityComparer()
+        get_FloatFormatHandling()
+        get_FloatParseHandling()
+        get_MaxDepth()
+        get_MissingMemberHandling()
+        get_NullValueHandling()
+        get_ObjectCreationHandling()
+        get_PreserveReferencesHandling()
+        get_ReferenceLoopHandling()
+        get_ReferenceResolver()
+        get_StringEscapeHandling()
+        get_TypeNameAssemblyFormat()
+        get_TypeNameHandling()
+        Populate(Newtonsoft.Json.JsonReader,System.Object)
+        Populate(System.IO.TextReader,System.Object)
+        PopulateInternal(Newtonsoft.Json.JsonReader,System.Object)
+        Serialize(System.IO.TextWriter,System.Object)
+        Serialize(System.IO.TextWriter,System.Object,System.Type)
+        set_Culture(System.Globalization.CultureInfo)
+        set_DateFormatHandling(Newtonsoft.Json.DateFormatHandling)
+        set_DateFormatString(System.String)
+        set_DateParseHandling(Newtonsoft.Json.DateParseHandling)
+        set_DateTimeZoneHandling(Newtonsoft.Json.DateTimeZoneHandling)
+        set_FloatFormatHandling(Newtonsoft.Json.FloatFormatHandling)
+        set_FloatParseHandling(Newtonsoft.Json.FloatParseHandling)
+        set_Formatting(Newtonsoft.Json.Formatting)
+        set_MaxDepth(System.Nullable`1<System.Int32>)
+        set_StringEscapeHandling(Newtonsoft.Json.StringEscapeHandling)
+    Newtonsoft.Json.JsonSerializerSettings
+        DefaultCheckAdditionalContent
+        DefaultConstructorHandling
+        DefaultDateFormatHandling
+        DefaultDateFormatString
+        DefaultDateParseHandling
+        DefaultDateTimeZoneHandling
+        DefaultDefaultValueHandling
+        DefaultFloatFormatHandling
+        DefaultFloatParseHandling
+        DefaultFormatterAssemblyStyle
+        DefaultFormatting
+        DefaultMetadataPropertyHandling
+        DefaultMissingMemberHandling
+        DefaultNullValueHandling
+        DefaultObjectCreationHandling
+        DefaultPreserveReferencesHandling
+        DefaultReferenceLoopHandling
+        DefaultStringEscapeHandling
+        DefaultTypeNameAssemblyFormat
+        DefaultTypeNameHandling
+        .ctor()
+        get_CheckAdditionalContent()
+        get_Culture()
+        get_DateFormatHandling()
+        get_DateFormatString()
+        get_DateParseHandling()
+        get_DateTimeZoneHandling()
+        get_FloatFormatHandling()
+        get_FloatParseHandling()
+        get_Formatting()
+        get_MaxDepth()
+        get_ReferenceResolver()
+        get_StringEscapeHandling()
+        set_Binder(System.Runtime.Serialization.SerializationBinder)
+        set_CheckAdditionalContent(System.Boolean)
+        set_ConstructorHandling(Newtonsoft.Json.ConstructorHandling)
+        set_Context(System.Runtime.Serialization.StreamingContext)
+        set_ContractResolver(Newtonsoft.Json.Serialization.IContractResolver)
+        set_Converters(System.Collections.Generic.IList`1<Newtonsoft.Json.JsonConverter>)
+        set_Culture(System.Globalization.CultureInfo)
+        set_DateFormatHandling(Newtonsoft.Json.DateFormatHandling)
+        set_DateFormatString(System.String)
+        set_DateParseHandling(Newtonsoft.Json.DateParseHandling)
+        set_DateTimeZoneHandling(Newtonsoft.Json.DateTimeZoneHandling)
+        set_DefaultValueHandling(Newtonsoft.Json.DefaultValueHandling)
+        set_EqualityComparer(System.Collections.IEqualityComparer)
+        set_Error(System.EventHandler`1<Newtonsoft.Json.Serialization.ErrorEventArgs>)
+        set_FloatFormatHandling(Newtonsoft.Json.FloatFormatHandling)
+        set_FloatParseHandling(Newtonsoft.Json.FloatParseHandling)
+        set_Formatting(Newtonsoft.Json.Formatting)
+        set_MaxDepth(System.Nullable`1<System.Int32>)
+        set_MetadataPropertyHandling(Newtonsoft.Json.MetadataPropertyHandling)
+        set_MissingMemberHandling(Newtonsoft.Json.MissingMemberHandling)
+        set_NullValueHandling(Newtonsoft.Json.NullValueHandling)
+        set_ObjectCreationHandling(Newtonsoft.Json.ObjectCreationHandling)
+        set_PreserveReferencesHandling(Newtonsoft.Json.PreserveReferencesHandling)
+        set_ReferenceLoopHandling(Newtonsoft.Json.ReferenceLoopHandling)
+        set_ReferenceResolver(Newtonsoft.Json.Serialization.IReferenceResolver)
+        set_ReferenceResolverProvider(System.Func`1<Newtonsoft.Json.Serialization.IReferenceResolver>)
+        set_StringEscapeHandling(Newtonsoft.Json.StringEscapeHandling)
+        set_TraceWriter(Newtonsoft.Json.Serialization.ITraceWriter)
+        set_TypeNameAssemblyFormat(System.Runtime.Serialization.Formatters.FormatterAssemblyStyle)
+        set_TypeNameHandling(Newtonsoft.Json.TypeNameHandling)
+    Newtonsoft.Json.JsonSerializerSettings/<>c__DisplayClass90_0
+    Newtonsoft.Json.JsonTextReader
+        MaximumJavascriptIntegerCharacterLength
+        UnicodeReplacementChar
+        get_ArrayPool()
+        set_ArrayPool(Newtonsoft.Json.IArrayPool`1<System.Char>)
+    Newtonsoft.Json.JsonTextWriter
+        Flush()
+        get_ArrayPool()
+        get_Indentation()
+        get_IndentChar()
+        get_QuoteName()
+        set_ArrayPool(Newtonsoft.Json.IArrayPool`1<System.Char>)
+        set_Indentation(System.Int32)
+        set_IndentChar(System.Char)
+        set_QuoteChar(System.Char)
+        set_QuoteName(System.Boolean)
+        WriteValue(System.Object)
+        WriteWhitespace(System.String)
+    Newtonsoft.Json.JsonWriter
+        Flush()
+        InternalWriteWhitespace(System.String)
+        SetWriteState(Newtonsoft.Json.JsonToken,System.Object)
+        WriteToken(Newtonsoft.Json.JsonReader)
+        WriteToken(Newtonsoft.Json.JsonReader,System.Boolean)
+        WriteToken(Newtonsoft.Json.JsonToken)
+        WriteValue(System.Object)
+        WriteWhitespace(System.String)
+    Newtonsoft.Json.JsonWriterException
+        .ctor(System.String)
+        .ctor(System.String,System.Exception)
+        get_Path()
+    Newtonsoft.Json.Linq.Dummy
+    Newtonsoft.Json.Serialization.CamelCaseNamingStrategy
+    Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver
+    Newtonsoft.Json.Serialization.DefaultContractResolver
+        CreateLinqContract(System.Type)
+        get_DynamicCodeGeneration()
+        set_IgnoreSerializableInterface(System.Boolean)
+        set_NamingStrategy(Newtonsoft.Json.Serialization.NamingStrategy)
+        set_SerializeCompilerGeneratedMembers(System.Boolean)
+    Newtonsoft.Json.Serialization.DefaultContractResolver/EnumerableDictionaryWrapper`2
+        .ctor(System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<TEnumeratorKey,TEnumeratorValue>>)
+    Newtonsoft.Json.Serialization.ErrorContext
+        get_Member()
+        get_OriginalObject()
+        get_Path()
+        set_Handled(System.Boolean)
+    Newtonsoft.Json.Serialization.ErrorEventArgs
+        get_CurrentObject()
+        get_ErrorContext()
+    Newtonsoft.Json.Serialization.IAttributeProvider
+        GetAttributes(System.Boolean)
+        GetAttributes(System.Type,System.Boolean)
+    Newtonsoft.Json.Serialization.JsonContract
+        get_OnDeserialized()
+        get_OnDeserializing()
+        get_OnError()
+        get_OnSerialized()
+        get_OnSerializing()
+        set_OnDeserialized(System.Reflection.MethodInfo)
+        set_OnDeserializing(System.Reflection.MethodInfo)
+        set_OnError(System.Reflection.MethodInfo)
+        set_OnSerialized(System.Reflection.MethodInfo)
+        set_OnSerializing(System.Reflection.MethodInfo)
+    Newtonsoft.Json.Serialization.JsonDictionaryContract
+        get_PropertyNameResolver()
+        set_PropertyNameResolver(System.Func`2<System.String,System.String>)
+    Newtonsoft.Json.Serialization.JsonISerializableContract
+        get_ISerializableCreator()
+    Newtonsoft.Json.Serialization.JsonLinqContract
+    Newtonsoft.Json.Serialization.JsonObjectContract
+        get_ConstructorParameters()
+        get_ExtensionDataValueType()
+        get_OverrideConstructor()
+        get_ParametrizedConstructor()
+        set_OverrideCreator(Newtonsoft.Json.Serialization.ObjectConstructor`1<System.Object>)
+    Newtonsoft.Json.Serialization.JsonProperty
+        get_AttributeProvider()
+        set_Required(Newtonsoft.Json.Required)
+        set_ShouldDeserialize(System.Predicate`1<System.Object>)
+    Newtonsoft.Json.Serialization.JsonSerializerInternalReader
+        Populate(Newtonsoft.Json.JsonReader,System.Object)
+    Newtonsoft.Json.Serialization.JsonSerializerInternalWriter
+        SerializeISerializable(Newtonsoft.Json.JsonWriter,System.Runtime.Serialization.ISerializable,Newtonsoft.Json.Serialization.JsonISerializableContract,Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonContainerContract,Newtonsoft.Json.Serialization.JsonProperty)
+        ShouldWriteDynamicProperty(System.Object)
+    Newtonsoft.Json.Serialization.JsonSerializerProxy
+        get_Binder()
+        get_ConstructorHandling()
+        get_Culture()
+        get_DateFormatHandling()
+        get_DateFormatString()
+        get_DateParseHandling()
+        get_DateTimeZoneHandling()
+        get_DefaultValueHandling()
+        get_EqualityComparer()
+        get_FloatFormatHandling()
+        get_FloatParseHandling()
+        get_MaxDepth()
+        get_MissingMemberHandling()
+        get_NullValueHandling()
+        get_ObjectCreationHandling()
+        get_PreserveReferencesHandling()
+        get_ReferenceLoopHandling()
+        get_ReferenceResolver()
+        get_StringEscapeHandling()
+        get_TypeNameAssemblyFormat()
+        get_TypeNameHandling()
+        PopulateInternal(Newtonsoft.Json.JsonReader,System.Object)
+        set_Culture(System.Globalization.CultureInfo)
+        set_DateFormatHandling(Newtonsoft.Json.DateFormatHandling)
+        set_DateFormatString(System.String)
+        set_DateParseHandling(Newtonsoft.Json.DateParseHandling)
+        set_DateTimeZoneHandling(Newtonsoft.Json.DateTimeZoneHandling)
+        set_FloatFormatHandling(Newtonsoft.Json.FloatFormatHandling)
+        set_FloatParseHandling(Newtonsoft.Json.FloatParseHandling)
+        set_Formatting(Newtonsoft.Json.Formatting)
+        set_MaxDepth(System.Nullable`1<System.Int32>)
+        set_StringEscapeHandling(Newtonsoft.Json.StringEscapeHandling)
+    Newtonsoft.Json.Serialization.JsonTypeReflector
+        _dynamicCodeGeneration
+        ArrayValuesPropertyName
+        IdPropertyName
+        RefPropertyName
+        ShouldSerializePrefix
+        SpecifiedPostfix
+        TypePropertyName
+        ValuePropertyName
+        get_DynamicCodeGeneration()
+    Newtonsoft.Json.Serialization.MemoryTraceWriter
+    Newtonsoft.Json.Serialization.NamingStrategy
+        .ctor()
+        set_OverrideSpecifiedNames(System.Boolean)
+        set_ProcessDictionaryKeys(System.Boolean)
+    Newtonsoft.Json.Serialization.OnErrorAttribute
+        .ctor()
+    Newtonsoft.Json.Serialization.ReflectionAttributeProvider
+        GetAttributes(System.Boolean)
+        GetAttributes(System.Type,System.Boolean)
+    Newtonsoft.Json.Serialization.TraceJsonReader
+        get_QuoteChar()
+        set_QuoteChar(System.Char)
+    Newtonsoft.Json.Serialization.TraceJsonWriter
+        Flush()
+        WriteValue(System.Object)
+        WriteWhitespace(System.String)
+    Newtonsoft.Json.Utilities.AotHelper
+    Newtonsoft.Json.Utilities.Base64Encoder
+        Base64LineSize
+        LineSizeInBytes
+    Newtonsoft.Json.Utilities.BidirectionalDictionary`2
+        .ctor()
+    Newtonsoft.Json.Utilities.CollectionUtils
+        AddDistinct<T>(System.Collections.Generic.IList`1<T>,T)
+        AddDistinct<T>(System.Collections.Generic.IList`1<T>,T,System.Collections.Generic.IEqualityComparer`1<T>)
+        AddRangeDistinct<T>(System.Collections.Generic.IList`1<T>,System.Collections.Generic.IEnumerable`1<T>,System.Collections.Generic.IEqualityComparer`1<T>)
+        ContainsValue<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,TSource,System.Collections.Generic.IEqualityComparer`1<TSource>)
+        IndexOfReference<T>(System.Collections.Generic.List`1<T>,T)
+    Newtonsoft.Json.Utilities.CollectionWrapper`1
+        .ctor(System.Collections.Generic.ICollection`1<T>)
+        .ctor(System.Collections.IList)
+    Newtonsoft.Json.Utilities.ConvertUtils
+        Convert(System.Object,System.Globalization.CultureInfo,System.Type)
+    Newtonsoft.Json.Utilities.Creator`1
+    Newtonsoft.Json.Utilities.DateTimeParser
+        MaxFractionDigits
+    Newtonsoft.Json.Utilities.DateTimeUtils
+        DaysPer100Years
+        DaysPer400Years
+        DaysPer4Years
+        DaysPerYear
+        IsoDateFormat
+        TicksPerDay
+        ConvertDateTimeToJavaScriptTicks(System.DateTime)
+        ConvertDateTimeToJavaScriptTicks(System.DateTime,System.Boolean)
+        ToUniversalTicks(System.DateTime)
+    Newtonsoft.Json.Utilities.DictionaryWrapper`2
+        .ctor(System.Collections.Generic.IDictionary`2<TKey,TValue>)
+        .ctor(System.Collections.IDictionary)
+        get_Keys()
+        get_Values()
+        System.Collections.IDictionary.get_IsFixedSize()
+        System.Collections.IDictionary.get_Keys()
+        System.Collections.IDictionary.get_Values()
+    Newtonsoft.Json.Utilities.EnumUtils
+        GetFlagsValues<T>(T)
+        GetNames(System.Type)
+        GetNamesAndValues<T>()
+        GetNamesAndValues<TUnderlyingType>(System.Type)
+        ParseEnumName(System.String,System.Boolean,System.Type)
+        ResolvedEnumName(Newtonsoft.Json.Utilities.BidirectionalDictionary`2<System.String,System.String>,System.String)
+        ToEnumName(System.Type,System.String,System.Boolean)
+    Newtonsoft.Json.Utilities.EnumUtils/<>c
+        <>9__6_0
+        <GetNames>b__6_0(System.Reflection.FieldInfo)
+    Newtonsoft.Json.Utilities.EnumUtils/<>c__2`1
+    Newtonsoft.Json.Utilities.EnumValue`1
+    Newtonsoft.Json.Utilities.JavaScriptUtils
+        EscapedUnicodeText
+        UnicodeTextLength
+    Newtonsoft.Json.Utilities.MathUtils
+        Max(System.Nullable`1<System.Double>,System.Nullable`1<System.Double>)
+        Max(System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+        Min(System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+    Newtonsoft.Json.Utilities.MiscellaneousUtils
+        ByteArrayCompare(System.Byte[],System.Byte[])
+        GetLocalName(System.String)
+        GetPrefix(System.String)
+        GetQualifiedNameParts(System.String,System.String&,System.String&)
+        ToString(System.Object)
+    Newtonsoft.Json.Utilities.ReflectionMember
+        get_Setter()
+    Newtonsoft.Json.Utilities.ReflectionObject
+        SetValue(System.Object,System.String,System.Object)
+    Newtonsoft.Json.Utilities.ReflectionUtils
+        IsMethodOverridden(System.Type,System.Type,System.String)
+    Newtonsoft.Json.Utilities.ReflectionUtils/<>c__DisplayClass43_0
+    Newtonsoft.Json.Utilities.StringUtils
+        CarriageReturn
+        CarriageReturnLineFeed
+        Empty
+        LineFeed
+        Tab
+        IsWhiteSpace(System.String)
+        StartsWith(System.String,System.Char)
+        ToCamelCase(System.String)
+        ToSnakeCase(System.String)
+    Newtonsoft.Json.Utilities.StringUtils/SnakeCaseState
+    Newtonsoft.Json.Utilities.TypeExtensions
+        Assembly(System.Type)
+        IsVisible(System.Type)
+        Method(System.Delegate)
+---------------------------------------------------
 Assembly: System
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 591
-    Nested = 13
-    Interfaces = 32
-    Abstract Classes = 45
-    Generic Types = 4
+  Total Type Removals = 554
+    Nested = 21
+    Interfaces = 25
+    Abstract Classes = 42
+    Generic Types = 2
     Generic Interfaces = 0
     Generic Abstract Classes = 0
-    Attributes = 37
-  Total Field Removals = 122
-  Total Method Removals = 792
+    Attributes = 36
+  Total Field Removals = 142
+  Total Method Removals = 998
   References Removed = 0
 ---------------------------------------------------
     <PrivateImplementationDetails>
@@ -7742,7 +8053,32 @@ Summary:
     Mono.Security.X509.OSX509Certificates
     System.CodeDom.Compiler.GeneratedCodeAttribute
     System.Collections.Generic.LinkedList`1
+        DataArrayKey
+        VersionKey
+        .ctor(System.Collections.Generic.IEnumerable`1<T>)
+        AddAfter(System.Collections.Generic.LinkedListNode`1<T>,System.Collections.Generic.LinkedListNode`1<T>)
+        AddAfter(System.Collections.Generic.LinkedListNode`1<T>,T)
+        AddBefore(System.Collections.Generic.LinkedListNode`1<T>,System.Collections.Generic.LinkedListNode`1<T>)
+        AddBefore(System.Collections.Generic.LinkedListNode`1<T>,T)
+        AddFirst(System.Collections.Generic.LinkedListNode`1<T>)
+        AddFirst(T)
+        AddLast(System.Collections.Generic.LinkedListNode`1<T>)
+        FindLast(T)
+        get_First()
+        get_Last()
+        RemoveFirst()
+        VerifyBlankNode(System.Collections.Generic.LinkedListNode`1<T>)
+    System.Collections.Generic.LinkedList`1/Enumerator
+        IndexKey
+        ListKey
+        VersionKey
     System.Collections.Generic.LinkedListNode`1
+        .ctor(T)
+        get_Next()
+        get_Previous()
+        InsertBetween(System.Collections.Generic.LinkedListNode`1<T>,System.Collections.Generic.LinkedListNode`1<T>,System.Collections.Generic.LinkedList`1<T>)
+        SelfReference(System.Collections.Generic.LinkedList`1<T>)
+        set_Value(T)
     System.Collections.Generic.Queue`1
         _tail
         .ctor(System.Collections.Generic.IEnumerable`1<T>)
@@ -7777,17 +8113,12 @@ Summary:
         switchAfter
         .ctor(System.Boolean)
         .ctor(System.Int32)
-        Clear()
-        Contains(System.Object)
         get_IsFixedSize()
-        get_IsReadOnly()
         get_Keys()
         get_Values()
     System.Collections.Specialized.IOrderedDictionary
     System.Collections.Specialized.ListDictionary
-        Contains(System.Object)
         get_IsFixedSize()
-        get_IsReadOnly()
         get_Keys()
         get_Values()
     System.Collections.Specialized.ListDictionary/DictionaryNodeCollection
@@ -7844,35 +8175,84 @@ Summary:
     System.Collections.Specialized.StringDictionary
     System.Collections.Specialized.StringEnumerator
     System.ComponentModel.ArrayConverter
+        .ctor()
+        GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+        GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+    System.ComponentModel.ArrayConverter/ArrayPropertyDescriptor
     System.ComponentModel.AsyncCompletedEventArgs
     System.ComponentModel.AsyncCompletedEventHandler
     System.ComponentModel.AsyncOperation
     System.ComponentModel.AsyncOperationManager
     System.ComponentModel.AttributeCollection
+        Contains(System.Attribute)
+        Contains(System.Attribute[])
+        FromExisting(System.ComponentModel.AttributeCollection,System.Attribute[])
+        get_Item(System.Int32)
+        Matches(System.Attribute)
+        Matches(System.Attribute[])
     System.ComponentModel.BackgroundWorker
     System.ComponentModel.BaseNumberConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.BindableSupport
     System.ComponentModel.BooleanConverter
+        .ctor()
+        GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
     System.ComponentModel.BrowsableAttribute
     System.ComponentModel.ByteConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.CancelEventArgs
     System.ComponentModel.CategoryAttribute
     System.ComponentModel.CharConverter
+        .ctor()
     System.ComponentModel.CollectionChangeAction
     System.ComponentModel.CollectionChangeEventArgs
     System.ComponentModel.CollectionChangeEventHandler
     System.ComponentModel.CollectionConverter
+        .ctor()
+        GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+        GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
     System.ComponentModel.Component
     System.ComponentModel.ComponentCollection
+        .ctor(System.ComponentModel.IComponent[])
+        CopyTo(System.ComponentModel.IComponent[],System.Int32)
+        get_Item(System.Int32)
     System.ComponentModel.ComponentConverter
+        .ctor(System.Type)
+        GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+        GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
     System.ComponentModel.ComponentInfo
     System.ComponentModel.CultureInfoConverter
+        _standardValues
+        .ctor()
+        GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+    System.ComponentModel.CultureInfoConverter/CultureInfoComparer
     System.ComponentModel.CustomTypeDescriptor
     System.ComponentModel.DateTimeConverter
+        .ctor()
     System.ComponentModel.DecimalConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.DefaultEventAttribute
     System.ComponentModel.DefaultPropertyAttribute
     System.ComponentModel.DefaultValueAttribute
+        .ctor(System.Boolean)
+        .ctor(System.Byte)
+        .ctor(System.Char)
+        .ctor(System.Double)
+        .ctor(System.Int16)
+        .ctor(System.Int32)
+        .ctor(System.Int64)
+        .ctor(System.Object)
+        .ctor(System.Single)
+        .ctor(System.String)
+        .ctor(System.Type,System.String)
+        SetValue(System.Object)
     System.ComponentModel.DescriptionAttribute
     System.ComponentModel.Design.CommandID
     System.ComponentModel.Design.ComponentChangedEventArgs
@@ -7892,13 +8272,27 @@ Summary:
     System.ComponentModel.Design.IDesigner
     System.ComponentModel.Design.IDesignerHost
     System.ComponentModel.Design.IReferenceService
+        GetComponent(System.Object)
+        GetReferences()
+        GetReferences(System.Type)
     System.ComponentModel.Design.IRootDesigner
     System.ComponentModel.Design.IServiceContainer
     System.ComponentModel.Design.ITypeDescriptorFilterService
+        FilterEvents(System.ComponentModel.IComponent,System.Collections.IDictionary)
+        FilterProperties(System.ComponentModel.IComponent,System.Collections.IDictionary)
     System.ComponentModel.Design.ITypeResolutionService
+        GetAssembly(System.Reflection.AssemblyName)
+        GetAssembly(System.Reflection.AssemblyName,System.Boolean)
+        GetPathOfAssembly(System.Reflection.AssemblyName)
+        GetType(System.String,System.Boolean)
+        GetType(System.String,System.Boolean,System.Boolean)
+        ReferenceAssembly(System.Reflection.AssemblyName)
     System.ComponentModel.Design.MenuCommand
     System.ComponentModel.Design.RuntimeLicenseContext
     System.ComponentModel.Design.Serialization.InstanceDescriptor
+        get_Arguments()
+        get_IsComplete()
+        get_MemberInfo()
     System.ComponentModel.Design.ServiceCreatorCallback
     System.ComponentModel.Design.StandardCommands
     System.ComponentModel.Design.ViewTechnology
@@ -7910,40 +8304,84 @@ Summary:
     System.ComponentModel.DesignTimeVisibleAttribute
     System.ComponentModel.DisplayNameAttribute
     System.ComponentModel.DoubleConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.DoWorkEventArgs
     System.ComponentModel.DoWorkEventHandler
     System.ComponentModel.EditorAttribute
     System.ComponentModel.EditorBrowsableAttribute
         .ctor()
     System.ComponentModel.EnumConverter
+        stdValues
+        .ctor(System.Type)
+        get_Comparer()
+        get_EnumType()
+        get_Values()
+        GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+        set_Values(System.ComponentModel.TypeConverter/StandardValuesCollection)
+    System.ComponentModel.EnumConverter/EnumComparer
     System.ComponentModel.EventDescriptor
     System.ComponentModel.EventDescriptorCollection
     System.ComponentModel.EventHandlerList
     System.ComponentModel.ExpandableObjectConverter
     System.ComponentModel.GuidConverter
+        .ctor()
     System.ComponentModel.IBindingList
     System.ComponentModel.IBindingListView
     System.ComponentModel.IChangeTracking
     System.ComponentModel.IComNativeDescriptorHandler
     System.ComponentModel.IComponent
+        add_Disposed(System.EventHandler)
+        remove_Disposed(System.EventHandler)
+        set_Site(System.ComponentModel.ISite)
     System.ComponentModel.IContainer
+        Add(System.ComponentModel.IComponent)
+        Add(System.ComponentModel.IComponent,System.String)
+        Remove(System.ComponentModel.IComponent)
     System.ComponentModel.ICustomTypeDescriptor
     System.ComponentModel.IDataErrorInfo
     System.ComponentModel.IEditableObject
     System.ComponentModel.IListSource
     System.ComponentModel.ImmutableObjectAttribute
     System.ComponentModel.Info
+        _defaultEvent
+        _defaultProperty
+        _gotDefaultEvent
+        _gotDefaultProperty
+        get_InfoType()
+        GetDefaultEvent()
+        GetDefaultProperty()
+        GetEvents()
+        GetEvents(System.Attribute[])
+        GetProperties()
+        GetProperties(System.Attribute[])
     System.ComponentModel.INotifyPropertyChanged
     System.ComponentModel.Int16Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.Int32Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.Int64Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.InvalidEnumArgumentException
     System.ComponentModel.IRevertibleChangeTracking
     System.ComponentModel.ISite
+        get_Component()
+        get_Container()
+        get_DesignMode()
+        set_Name(System.String)
     System.ComponentModel.ISupportInitialize
     System.ComponentModel.ISupportInitializeNotification
     System.ComponentModel.ISynchronizeInvoke
     System.ComponentModel.ITypeDescriptorContext
+        get_Instance()
+        get_PropertyDescriptor()
+        OnComponentChanged()
+        OnComponentChanging()
     System.ComponentModel.ITypedList
     System.ComponentModel.License
     System.ComponentModel.LicenseContext
@@ -7969,6 +8407,17 @@ Summary:
     System.ComponentModel.MultilineStringConverter
     System.ComponentModel.NotifyParentPropertyAttribute
     System.ComponentModel.NullableConverter
+        .ctor(System.Type)
+        CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
+        get_NullableType()
+        get_UnderlyingType()
+        get_UnderlyingTypeConverter()
+        GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+        GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+        GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
     System.ComponentModel.PasswordPropertyTextAttribute
     System.ComponentModel.ProgressChangedEventArgs
     System.ComponentModel.ProgressChangedEventHandler
@@ -7979,6 +8428,12 @@ Summary:
     System.ComponentModel.ReadOnlyAttribute
     System.ComponentModel.RecommendedAsConfigurableAttribute
     System.ComponentModel.ReferenceConverter
+        reference_type
+        .ctor(System.Type)
+        GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+        GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+        IsValueAllowed(System.ComponentModel.ITypeDescriptorContext,System.Object)
     System.ComponentModel.ReflectionEventDescriptor
     System.ComponentModel.ReflectionPropertyDescriptor
     System.ComponentModel.RefreshEventArgs
@@ -7988,36 +8443,31 @@ Summary:
     System.ComponentModel.RunWorkerCompletedEventArgs
     System.ComponentModel.RunWorkerCompletedEventHandler
     System.ComponentModel.SByteConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.SingleConverter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.StringConverter
+        .ctor()
     System.ComponentModel.TimeSpanConverter
+        .ctor()
     System.ComponentModel.ToolboxItemAttribute
     System.ComponentModel.ToolboxItemFilterAttribute
     System.ComponentModel.ToolboxItemFilterType
     System.ComponentModel.TypeConverter
         .ctor()
-        CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
-        CanConvertFrom(System.Type)
-        CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
-        CanConvertTo(System.Type)
-        ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
         ConvertFrom(System.Object)
         ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
         ConvertFromInvariantString(System.String)
         ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
         ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
         ConvertFromString(System.String)
-        ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
         ConvertTo(System.Object,System.Type)
-        ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
-        ConvertToInvariantString(System.Object)
-        ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
         ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
         ConvertToString(System.Object)
         CreateInstance(System.Collections.IDictionary)
         CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
-        GetConvertFromException(System.Object)
-        GetConvertToException(System.Object,System.Type)
         GetCreateInstanceSupported()
         GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
         GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
@@ -8031,7 +8481,6 @@ Summary:
         GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
         GetStandardValuesSupported()
         GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
-        IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
         IsValid(System.Object)
         SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
     System.ComponentModel.TypeConverter/SimplePropertyDescriptor
@@ -8039,14 +8488,117 @@ Summary:
     System.ComponentModel.TypeConverterAttribute
         .ctor(System.String)
     System.ComponentModel.TypeDescriptionProvider
+        _emptyCustomTypeDescriptor
+        _parent
+        .ctor()
+        .ctor(System.ComponentModel.TypeDescriptionProvider)
+        CreateInstance(System.IServiceProvider,System.Type,System.Type[],System.Object[])
+        GetCache(System.Object)
+        GetExtendedTypeDescriptor(System.Object)
+        GetFullComponentName(System.Object)
+        GetReflectionType(System.Object)
+        GetReflectionType(System.Type)
+        GetReflectionType(System.Type,System.Object)
+        GetTypeDescriptor(System.Object)
+        GetTypeDescriptor(System.Type)
+        GetTypeDescriptor(System.Type,System.Object)
+    System.ComponentModel.TypeDescriptionProvider/EmptyCustomTypeDescriptor
     System.ComponentModel.TypeDescriptor
+        descriptorHandler
+        editors
+        onDispose
+        Refreshed
+        .ctor()
+        add_Refreshed(System.ComponentModel.RefreshEventHandler)
+        AddAttributes(System.Object,System.Attribute[])
+        AddAttributes(System.Type,System.Attribute[])
+        AddEditorTable(System.Type,System.Collections.Hashtable)
+        AddProvider(System.ComponentModel.TypeDescriptionProvider,System.Object)
+        AddProvider(System.ComponentModel.TypeDescriptionProvider,System.Type)
+        CreateAssociation(System.Object,System.Object)
+        CreateDesigner(System.ComponentModel.IComponent,System.Type)
+        CreateEditor(System.Type,System.Type)
+        CreateEvent(System.Type,System.ComponentModel.EventDescriptor,System.Attribute[])
+        CreateEvent(System.Type,System.String,System.Type,System.Attribute[])
+        CreateInstance(System.IServiceProvider,System.Type,System.Type[],System.Object[])
+        CreateProperty(System.Type,System.ComponentModel.PropertyDescriptor,System.Attribute[])
+        CreateProperty(System.Type,System.String,System.Type,System.Attribute[])
+        FindEditorInTable(System.Type,System.Type,System.Collections.Hashtable)
+        get_ComNativeDescriptorHandler()
+        get_ComObjectType()
+        GetAssociation(System.Type,System.Object)
+        GetAttributes(System.Object)
+        GetAttributes(System.Object,System.Boolean)
+        GetClassName(System.Object)
+        GetClassName(System.Object,System.Boolean)
+        GetClassName(System.Type)
+        GetComponentInfo(System.ComponentModel.IComponent)
+        GetComponentName(System.Object)
+        GetComponentName(System.Object,System.Boolean)
+        GetConverter(System.Object)
+        GetConverter(System.Object,System.Boolean)
+        GetDefaultEvent(System.Object)
+        GetDefaultEvent(System.Object,System.Boolean)
+        GetDefaultEvent(System.Type)
+        GetDefaultProperty(System.Object)
+        GetDefaultProperty(System.Object,System.Boolean)
+        GetDefaultProperty(System.Type)
+        GetEditor(System.Object,System.Type)
+        GetEditor(System.Object,System.Type,System.Boolean)
+        GetEditor(System.Type,System.Type)
+        GetEvents(System.Object)
+        GetEvents(System.Object,System.Attribute[])
+        GetEvents(System.Object,System.Attribute[],System.Boolean)
+        GetEvents(System.Object,System.Boolean)
+        GetEvents(System.Type)
+        GetEvents(System.Type,System.Attribute[])
+        GetFullComponentName(System.Object)
+        GetProperties(System.Object)
+        GetProperties(System.Object,System.Attribute[])
+        GetProperties(System.Object,System.Attribute[],System.Boolean)
+        GetProperties(System.Object,System.Boolean)
+        GetProperties(System.Type)
+        GetProperties(System.Type,System.Attribute[])
+        GetProvider(System.Object)
+        GetProvider(System.Type)
+        GetReflectionType(System.Object)
+        GetReflectionType(System.Type)
+        OnComponentDisposed(System.Object,System.EventArgs)
+        Refresh(System.Object)
+        Refresh(System.Reflection.Assembly)
+        Refresh(System.Reflection.Module)
+        Refresh(System.Type)
+        remove_Refreshed(System.ComponentModel.RefreshEventHandler)
+        RemoveAssociation(System.Object,System.Object)
+        RemoveAssociations(System.Object)
+        RemoveProvider(System.ComponentModel.TypeDescriptionProvider,System.Collections.Generic.LinkedList`1<System.ComponentModel.TypeDescriptionProvider>)
+        RemoveProvider(System.ComponentModel.TypeDescriptionProvider,System.Object)
+        RemoveProvider(System.ComponentModel.TypeDescriptionProvider,System.Type)
+        set_ComNativeDescriptorHandler(System.ComponentModel.IComNativeDescriptorHandler)
+        SortDescriptorArray(System.Collections.IList)
+    System.ComponentModel.TypeDescriptor/AttributeProvider
+    System.ComponentModel.TypeDescriptor/DefaultTypeDescriptionProvider
+    System.ComponentModel.TypeDescriptor/DefaultTypeDescriptor
+    System.ComponentModel.TypeDescriptor/WrappedTypeDescriptionProvider
     System.ComponentModel.TypeInfo
+        _events
+        _properties
+        GetEvents()
+        GetProperties()
     System.ComponentModel.TypeListConverter
     System.ComponentModel.UInt16Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.UInt32Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.UInt64Converter
+        .ctor()
+        ConvertToString(System.Object,System.Globalization.NumberFormatInfo)
     System.ComponentModel.WeakObjectWrapper
-    System.ComponentModel.WeakObjectWrapperComparer
+        .ctor(System.Object)
+        set_TargetHashCode(System.Int32)
+        set_Weak(System.WeakReference)
     System.ComponentModel.Win32Exception
     System.Diagnostics.ConsoleTraceListener
     System.Diagnostics.CorrelationManager
@@ -8080,7 +8632,6 @@ Summary:
     System.Diagnostics.TraceFilter
     System.Diagnostics.TraceImpl
     System.Diagnostics.TraceImplSettings
-    System.Diagnostics.TraceLevel
     System.Diagnostics.TraceListener
     System.Diagnostics.TraceListenerCollection
     System.Diagnostics.TraceOptions
@@ -9165,7 +9716,6 @@ Summary:
         InitializeReferences()
         IsMatch(System.String,System.String)
         IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
-        Match(System.String)
         Match(System.String,System.Int32,System.Int32)
         Match(System.String,System.String)
         Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
@@ -9285,7 +9835,6 @@ Summary:
         MaybeUri(System.String)
         NeedToEscapeDataChar(System.Char)
         NeedToEscapeUriChar(System.Char)
-        op_Inequality(System.Uri,System.Uri)
         Parse()
         set_Parser(System.UriParser)
         TryCreate(System.String,System.UriKind,System.Uri&)
@@ -9312,25 +9861,20 @@ Summary:
         Resolve(System.Uri,System.Uri,System.UriFormatException&)
     System.UriTypeConverter
         .ctor()
-        CanConvert(System.Type)
-        CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
-        CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
-        ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
-        ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
 ---------------------------------------------------
 Assembly: System.Core
 ---------------------------------------------------
 Summary:
-  Total Type Removals = 122
-    Nested = 50
-    Interfaces = 11
-    Abstract Classes = 9
-    Generic Types = 70
-    Generic Interfaces = 6
-    Generic Abstract Classes = 2
+  Total Type Removals = 105
+    Nested = 44
+    Interfaces = 9
+    Abstract Classes = 7
+    Generic Types = 55
+    Generic Interfaces = 4
+    Generic Abstract Classes = 0
     Attributes = 5
   Total Field Removals = 32
-  Total Method Removals = 299
+  Total Method Removals = 270
   References Removed = 0
 ---------------------------------------------------
     <PrivateImplementationDetails>
@@ -9345,13 +9889,11 @@ Summary:
         get_CanTransformMultipleBlocks()
         get_InputBlockSize()
         get_OutputBlockSize()
-    System.Action`2
     System.Action`3
     System.Action`4
     System.Collections.Generic.HashSet`1
         .ctor(System.Collections.Generic.IEnumerable`1<T>)
         .ctor(System.Collections.Generic.IEnumerable`1<T>,System.Collections.Generic.IEqualityComparer`1<T>)
-        .ctor(System.Collections.Generic.IEqualityComparer`1<T>)
         CheckIsSubsetOf(System.Collections.Generic.IEnumerable`1<T>)
         CheckIsSupersetOf(System.Collections.Generic.IEnumerable`1<T>)
         CopyTo(T[])
@@ -9369,12 +9911,10 @@ Summary:
         SymmetricExceptWith(System.Collections.Generic.IEnumerable`1<T>)
         TrimExcess()
         UnionWith(System.Collections.Generic.IEnumerable`1<T>)
-    System.Func`1
     System.Func`4
     System.Func`5
     System.InvalidTimeZoneException
     System.Linq.Check
-        FirstAndSecond(System.Object,System.Object)
         GroupBySelectors(System.Object,System.Object,System.Object,System.Object)
         JoinSelectors(System.Object,System.Object,System.Object,System.Object,System.Object)
         Source1AndSource2(System.Object,System.Object)
@@ -9382,10 +9922,7 @@ Summary:
         SourceAndCollectionSelectors(System.Object,System.Object,System.Object)
         SourceAndFunc(System.Object,System.Object)
         SourceAndFuncAndSelector(System.Object,System.Object,System.Object)
-        SourceAndKeyElementSelectors(System.Object,System.Object,System.Object)
         SourceAndKeyResultSelectors(System.Object,System.Object,System.Object)
-        SourceAndKeySelector(System.Object,System.Object)
-        SourceAndSelector(System.Object,System.Object)
     System.Linq.Enumerable
         <>f__am$cache0
         <>f__am$cache1
@@ -9461,7 +9998,6 @@ Summary:
         Aggregate<TSource,TAccumulate,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,TAccumulate,System.Func`3<TAccumulate,TSource,TAccumulate>,System.Func`2<TAccumulate,TResult>)
         Aggregate<TSource,TAccumulate>(System.Collections.Generic.IEnumerable`1<TSource>,TAccumulate,System.Func`3<TAccumulate,TSource,TAccumulate>)
         Aggregate<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,TSource,TSource>)
-        All<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         Any<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         AsEnumerable<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         Average(System.Collections.Generic.IEnumerable`1<System.Decimal>)
@@ -9484,14 +10020,9 @@ Summary:
         Average<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Nullable`1<System.Int64>>)
         Average<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Nullable`1<System.Single>>)
         Average<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Single>)
-        Cast<TResult>(System.Collections.IEnumerable)
         Concat<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
         Contains<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
-        Contains<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,TSource,System.Collections.Generic.IEqualityComparer`1<TSource>)
-        ContainsGroup<K,T>(System.Collections.Generic.Dictionary`2<K,System.Collections.Generic.List`1<T>>,K,System.Collections.Generic.IEqualityComparer`1<K>)
-        Count<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         Count<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-        CreateCastIterator<TResult>(System.Collections.IEnumerable)
         CreateConcatIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
         CreateDefaultIfEmptyIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
         CreateDistinctIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
@@ -9499,7 +10030,6 @@ Summary:
         CreateGroupByIterator<TSource,TKey,TElement,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TElement>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         CreateGroupByIterator<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         CreateGroupByIterator<TSource,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TSource>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
-        CreateGroupByIterator<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         CreateGroupJoinIterator<TOuter,TInner,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TOuter>,System.Collections.Generic.IEnumerable`1<TInner>,System.Func`2<TOuter,TKey>,System.Func`2<TInner,TKey>,System.Func`3<TOuter,System.Collections.Generic.IEnumerable`1<TInner>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         CreateIntersectIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
         CreateJoinIterator<TOuter,TInner,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TOuter>,System.Collections.Generic.IEnumerable`1<TInner>,System.Func`2<TOuter,TKey>,System.Func`2<TInner,TKey>,System.Func`3<TOuter,TInner,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
@@ -9507,11 +10037,9 @@ Summary:
         CreateRangeIterator(System.Int32,System.Int32)
         CreateRepeatIterator<TResult>(TResult,System.Int32)
         CreateReverseIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        CreateSelectIterator<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
         CreateSelectIterator<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,TResult>)
         CreateSelectManyIterator<TSource,TCollection,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Collections.Generic.IEnumerable`1<TCollection>>,System.Func`3<TSource,TCollection,TResult>)
         CreateSelectManyIterator<TSource,TCollection,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Collections.Generic.IEnumerable`1<TCollection>>,System.Func`3<TSource,TCollection,TResult>)
-        CreateSelectManyIterator<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Collections.Generic.IEnumerable`1<TResult>>)
         CreateSelectManyIterator<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Collections.Generic.IEnumerable`1<TResult>>)
         CreateSkipIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Int32)
         CreateSkipWhileIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
@@ -9519,7 +10047,6 @@ Summary:
         CreateTakeIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Int32)
         CreateTakeWhileIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         CreateTakeWhileIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Boolean>)
-        CreateUnionIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
         CreateWhereIterator<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Boolean>)
         DefaultIfEmpty<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         DefaultIfEmpty<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,TSource)
@@ -9531,10 +10058,8 @@ Summary:
         Empty<TResult>()
         Except<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
         Except<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
-        First<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         First<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         First<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>,System.Linq.Enumerable/Fallback)
-        FirstOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         FirstOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         GroupBy<TSource,TKey,TElement,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TElement>,TResult>)
         GroupBy<TSource,TKey,TElement,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TElement>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
@@ -9542,8 +10067,6 @@ Summary:
         GroupBy<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         GroupBy<TSource,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TSource>,TResult>)
         GroupBy<TSource,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`3<TKey,System.Collections.Generic.IEnumerable`1<TSource>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
-        GroupBy<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-        GroupBy<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         GroupJoin<TOuter,TInner,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TOuter>,System.Collections.Generic.IEnumerable`1<TInner>,System.Func`2<TOuter,TKey>,System.Func`2<TInner,TKey>,System.Func`3<TOuter,System.Collections.Generic.IEnumerable`1<TInner>,TResult>)
         GroupJoin<TOuter,TInner,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TOuter>,System.Collections.Generic.IEnumerable`1<TInner>,System.Func`2<TOuter,TKey>,System.Func`2<TInner,TKey>,System.Func`3<TOuter,System.Collections.Generic.IEnumerable`1<TInner>,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         Intersect<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
@@ -9557,9 +10080,7 @@ Summary:
         Join<TOuter,TInner,TKey,TResult>(System.Collections.Generic.IEnumerable`1<TOuter>,System.Collections.Generic.IEnumerable`1<TInner>,System.Func`2<TOuter,TKey>,System.Func`2<TInner,TKey>,System.Func`3<TOuter,TInner,TResult>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         Last<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         Last<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-        Last<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>,System.Linq.Enumerable/Fallback)
         LastOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        LastOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         LongCount<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         LongCount<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         Max(System.Collections.Generic.IEnumerable`1<System.Decimal>)
@@ -9607,26 +10128,18 @@ Summary:
         Min<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Nullable`1<System.Single>>)
         Min<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Single>)
         OfType<TResult>(System.Collections.IEnumerable)
-        OrderBy<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
-        OrderBy<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IComparer`1<TKey>)
         OrderByDescending<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
         OrderByDescending<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IComparer`1<TKey>)
         Range(System.Int32,System.Int32)
         Repeat<TResult>(TResult,System.Int32)
         Reverse<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        Select<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TResult>)
         Select<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,TResult>)
         SelectMany<TSource,TCollection,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Collections.Generic.IEnumerable`1<TCollection>>,System.Func`3<TSource,TCollection,TResult>)
         SelectMany<TSource,TCollection,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Collections.Generic.IEnumerable`1<TCollection>>,System.Func`3<TSource,TCollection,TResult>)
-        SelectMany<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Collections.Generic.IEnumerable`1<TResult>>)
         SelectMany<TSource,TResult>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Collections.Generic.IEnumerable`1<TResult>>)
         SequenceEqual<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
         SequenceEqual<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
-        Single<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         Single<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-        Single<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>,System.Linq.Enumerable/Fallback)
-        SingleOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        SingleOrDefault<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         Skip<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Int32)
         SkipWhile<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
         SkipWhile<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Boolean>)
@@ -9659,26 +10172,18 @@ Summary:
         ThenBy<TSource,TKey>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IComparer`1<TKey>)
         ThenByDescending<TSource,TKey>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
         ThenByDescending<TSource,TKey>(System.Linq.IOrderedEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IComparer`1<TKey>)
-        ToArray<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        ToDictionary<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
-        ToDictionary<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         ToDictionary<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
         ToDictionary<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IEqualityComparer`1<TKey>)
-        ToList<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
         ToLookup<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>)
         ToLookup<TSource,TKey,TElement>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Func`2<TSource,TElement>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         ToLookup<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)
         ToLookup<TSource,TKey>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>,System.Collections.Generic.IEqualityComparer`1<TKey>)
         ToReadOnlyCollection<TSource>(System.Collections.Generic.IEnumerable`1<TSource>)
-        Union<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>)
-        Union<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEnumerable`1<TSource>,System.Collections.Generic.IEqualityComparer`1<TSource>)
         Where<TSource>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`3<TSource,System.Int32,System.Boolean>)
-    System.Linq.Enumerable/<CreateCastIterator>c__Iterator0`1
     System.Linq.Enumerable/<CreateConcatIterator>c__Iterator1`1
     System.Linq.Enumerable/<CreateDefaultIfEmptyIterator>c__Iterator2`1
     System.Linq.Enumerable/<CreateDistinctIterator>c__Iterator3`1
     System.Linq.Enumerable/<CreateExceptIterator>c__Iterator4`1
-    System.Linq.Enumerable/<CreateGroupByIterator>c__Iterator5`2
     System.Linq.Enumerable/<CreateGroupByIterator>c__Iterator6`3
     System.Linq.Enumerable/<CreateGroupByIterator>c__Iterator7`4
     System.Linq.Enumerable/<CreateGroupByIterator>c__Iterator8`3
@@ -9689,9 +10194,7 @@ Summary:
     System.Linq.Enumerable/<CreateRangeIterator>c__IteratorD
     System.Linq.Enumerable/<CreateRepeatIterator>c__IteratorE`1
     System.Linq.Enumerable/<CreateReverseIterator>c__IteratorF`1
-    System.Linq.Enumerable/<CreateSelectIterator>c__Iterator10`2
     System.Linq.Enumerable/<CreateSelectIterator>c__Iterator11`2
-    System.Linq.Enumerable/<CreateSelectManyIterator>c__Iterator12`2
     System.Linq.Enumerable/<CreateSelectManyIterator>c__Iterator13`2
     System.Linq.Enumerable/<CreateSelectManyIterator>c__Iterator14`3
     System.Linq.Enumerable/<CreateSelectManyIterator>c__Iterator15`3
@@ -9701,7 +10204,6 @@ Summary:
     System.Linq.Enumerable/<CreateTakeIterator>c__Iterator19`1
     System.Linq.Enumerable/<CreateTakeWhileIterator>c__Iterator1A`1
     System.Linq.Enumerable/<CreateTakeWhileIterator>c__Iterator1B`1
-    System.Linq.Enumerable/<CreateUnionIterator>c__Iterator1C`1
     System.Linq.Enumerable/<CreateWhereIterator>c__Iterator1E`1
     System.Linq.Enumerable/<Max>c__AnonStorey28`1
     System.Linq.Enumerable/<Max>c__AnonStorey29`1
@@ -9720,7 +10222,6 @@ Summary:
     System.Linq.Enumerable/<Sum>c__AnonStorey36`1
     System.Linq.Enumerable/<Sum>c__AnonStorey37`1
     System.Linq.Enumerable/<Sum>c__AnonStorey38`1
-    System.Linq.Enumerable/Fallback
     System.Linq.Enumerable/Function`1
     System.Linq.Enumerable/ReadOnlyCollectionOf`1
     System.Linq.Expressions.BinaryExpression
@@ -9753,9 +10254,13 @@ Summary:
     System.Linq.Expressions.TypeBinaryExpression
     System.Linq.Expressions.UnaryExpression
     System.Linq.Grouping`2
+        get_Key()
+        set_Key(K)
     System.Linq.IGrouping`2
+        get_Key()
     System.Linq.ILookup`2
     System.Linq.IOrderedEnumerable`1
+        CreateOrderedEnumerable<TKey>(System.Func`2<TElement,TKey>,System.Collections.Generic.IComparer`1<TKey>,System.Boolean)
     System.Linq.IOrderedQueryable
     System.Linq.IOrderedQueryable`1
     System.Linq.IQueryable
@@ -9765,14 +10270,12 @@ Summary:
     System.Linq.IQueryProvider
     System.Linq.Lookup`2
     System.Linq.OrderedEnumerable`1
+        CreateOrderedEnumerable<TKey>(System.Func`2<TElement,TKey>,System.Collections.Generic.IComparer`1<TKey>,System.Boolean)
     System.Linq.OrderedSequence`2
+        .ctor(System.Linq.OrderedEnumerable`1<TElement>,System.Collections.Generic.IEnumerable`1<TElement>,System.Func`2<TElement,TKey>,System.Collections.Generic.IComparer`1<TKey>,System.Linq.SortDirection)
     System.Linq.Queryable
     System.Linq.QueryableEnumerable`1
     System.Linq.QueryableTransformer
-    System.Linq.QuickSort`1
-    System.Linq.SortContext`1
-    System.Linq.SortDirection
-    System.Linq.SortSequenceContext`2
     System.MonoDocumentationNoteAttribute
     System.MonoExtensionAttribute
     System.MonoInternalNoteAttribute
@@ -9797,6 +10300,100 @@ Summary:
     System.TimeZoneInfo
     System.TimeZoneNotFoundException
 ---------------------------------------------------
+Assembly: System.Runtime.Serialization
+---------------------------------------------------
+Summary:
+  Total Type Removals = 59
+    Nested = 0
+    Interfaces = 11
+    Abstract Classes = 6
+    Generic Types = 0
+    Generic Interfaces = 0
+    Generic Abstract Classes = 0
+    Attributes = 10
+  Total Field Removals = 2
+  Total Method Removals = 13
+  References Removed = 1
+    System.Xml
+---------------------------------------------------
+    <PrivateImplementationDetails>
+    Consts
+    Locale
+    System.MonoDocumentationNoteAttribute
+    System.MonoExtensionAttribute
+    System.MonoInternalNoteAttribute
+    System.MonoLimitationAttribute
+    System.MonoNotSupportedAttribute
+    System.MonoTODOAttribute
+    System.Runtime.Serialization.CollectionContractTypeMap
+    System.Runtime.Serialization.CollectionDataContractAttribute
+    System.Runtime.Serialization.CollectionTypeMap
+    System.Runtime.Serialization.ContractNamespaceAttribute
+    System.Runtime.Serialization.DataContractAttribute
+        name
+        ns
+        .ctor()
+        get_Name()
+        get_Namespace()
+        set_IsReference(System.Boolean)
+        set_Name(System.String)
+        set_Namespace(System.String)
+    System.Runtime.Serialization.DataContractSerializer
+    System.Runtime.Serialization.DataMemberAttribute
+        .ctor()
+        set_EmitDefaultValue(System.Boolean)
+        set_IsRequired(System.Boolean)
+        set_Name(System.String)
+        set_Order(System.Int32)
+    System.Runtime.Serialization.DataMemberInfo
+    System.Runtime.Serialization.DefaultTypeMap
+    System.Runtime.Serialization.DictionaryTypeMap
+    System.Runtime.Serialization.EnumMap
+    System.Runtime.Serialization.EnumMemberAttribute
+        .ctor()
+        set_Value(System.String)
+    System.Runtime.Serialization.EnumMemberInfo
+    System.Runtime.Serialization.ExportOptions
+    System.Runtime.Serialization.ExtensionDataObject
+    System.Runtime.Serialization.ICollectionTypeMap
+    System.Runtime.Serialization.IDataContractSurrogate
+    System.Runtime.Serialization.IExtensibleDataObject
+    System.Runtime.Serialization.IgnoreDataMemberAttribute
+    System.Runtime.Serialization.InvalidDataContractException
+    System.Runtime.Serialization.KnownTypeAttribute
+    System.Runtime.Serialization.KnownTypeCollection
+    System.Runtime.Serialization.NetDataContractSerializer
+    System.Runtime.Serialization.SerializationMap
+    System.Runtime.Serialization.SharedContractMap
+    System.Runtime.Serialization.SharedTypeMap
+    System.Runtime.Serialization.TypeExtensions
+    System.Runtime.Serialization.XmlFormatterDeserializer
+    System.Runtime.Serialization.XmlFormatterSerializer
+    System.Runtime.Serialization.XmlObjectSerializer
+    System.Runtime.Serialization.XmlSerializableMap
+    System.Xml.IStreamProvider
+    System.Xml.IXmlBinaryReaderInitializer
+    System.Xml.IXmlBinaryWriterInitializer
+    System.Xml.IXmlDictionary
+    System.Xml.IXmlMtomReaderInitializer
+    System.Xml.IXmlMtomWriterInitializer
+    System.Xml.IXmlTextReaderInitializer
+    System.Xml.IXmlTextWriterInitializer
+    System.Xml.OnXmlDictionaryReaderClose
+    System.Xml.UniqueId
+    System.Xml.XmlBinaryDictionaryReader
+    System.Xml.XmlBinaryDictionaryWriter
+    System.Xml.XmlBinaryFormat
+    System.Xml.XmlBinaryReaderSession
+    System.Xml.XmlBinaryWriterSession
+    System.Xml.XmlDictionary
+    System.Xml.XmlDictionaryReader
+    System.Xml.XmlDictionaryReaderQuotas
+    System.Xml.XmlDictionaryString
+    System.Xml.XmlDictionaryWriter
+    System.Xml.XmlSimpleDictionaryReader
+    System.Xml.XmlSimpleDictionaryWriter
+---------------------------------------------------
 Assembly: UnityEngine
 ---------------------------------------------------
 Summary:
@@ -9809,7 +10406,7 @@ Summary:
     Generic Abstract Classes = 0
     Attributes = 49
   Total Field Removals = 54
-  Total Method Removals = 4341
+  Total Method Removals = 4343
   References Removed = 0
 ---------------------------------------------------
     AOT.MonoPInvokeCallbackAttribute
@@ -12227,6 +12824,8 @@ Summary:
     UnityEngine.JointSuspension2D
     UnityEngine.JointTranslationLimits2D
     UnityEngine.JsonUtility
+        FromJson(System.String,System.Type)
+        FromJson<T>(System.String)
         FromJsonOverwrite(System.String,System.Object)
     UnityEngine.jvalue
     UnityEngine.LayerMask
@@ -15206,3 +15805,36 @@ Summary:
         .ctor()
     UnityEngineInternal.WebRequestUtils
         MakeInitialUrl(System.String,System.String)
+---------------------------------------------------
+Assembly: UnityScript.Lang
+---------------------------------------------------
+Summary:
+  Total Type Removals = 8
+    Nested = 0
+    Interfaces = 0
+    Abstract Classes = 2
+    Generic Types = 0
+    Generic Interfaces = 0
+    Generic Abstract Classes = 0
+    Attributes = 0
+  Total Field Removals = 0
+  Total Method Removals = 8
+  References Removed = 0
+---------------------------------------------------
+    CompilerGenerated.$adaptor$__ExpandoServices$callable0$60_29__$Predicate$0
+    CompilerGenerated.__ExpandoServices$callable0$60_29__
+    UnityScript.Lang.Array
+    UnityScript.Lang.Expando
+    UnityScript.Lang.ExpandoServices
+    UnityScript.Lang.Extensions
+    UnityScript.Lang.ListUpdateableEnumerator
+    UnityScript.Lang.UnityBuiltins
+        eval(System.String)
+        parseFloat(System.Double)
+        parseFloat(System.Int32)
+        parseFloat(System.Single)
+        parseInt(System.Double)
+        parseInt(System.Int32)
+        parseInt(System.Single)
+        parseInt(System.String)
+    UnityScript.Lang.UnityRuntimeServices

@@ -2,7 +2,7 @@
 
 var m_MyEvent:MyEvent;
 public static var userRole:UserRole = new UserRole();
-
+public static var handler:DataHandler;
 function Start () {
 	if(m_MyEvent == null) {
 		m_MyEvent = new MyEvent();
@@ -30,14 +30,14 @@ function move3D(d) {
 
 function getMessageFromServer(msg:String) {
 	print("getMessageFromServer " + msg);
-	var obj = JsonUtility.FromJson.<DataObject>(msg);
+	var obj = Newtonsoft.Json.JsonConvert.DeserializeObject.<DataObject>(msg);//JsonUtility.FromJson.<DataObject>(msg);
 //	var data = JsonUtility.FromJson.<Msg>(obj.data);
 	switch(obj.data.type) {
 		case "3dMove":
 			_get3DParam(obj.data);
 			break;
 		case "userRole":
-			userRole = obj.data.data;
+			userRole = Newtonsoft.Json.JsonConvert.DeserializeObject.<UserRole>(obj.data.data);
 			_userRole(obj.data);
 			break;
 	}

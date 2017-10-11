@@ -1530,10 +1530,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.JsonUtility
 
-		//System.Object UnityEngine.JsonUtility::FromJson(System.String,System.Type)
-		void Register_UnityEngine_JsonUtility_FromJson();
-		Register_UnityEngine_JsonUtility_FromJson();
-
 		//System.String UnityEngine.JsonUtility::ToJson(System.Object,System.Boolean)
 		void Register_UnityEngine_JsonUtility_ToJson();
 		Register_UnityEngine_JsonUtility_ToJson();

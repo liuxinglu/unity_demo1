@@ -335,7 +335,6 @@ UnityEngine.Input::INTERNAL_get_mouseScrollDelta
 UnityEngine.Input::INTERNAL_set_compositionCursorPos
 UnityEngine.Input::set_imeCompositionMode
 UnityEngine.Input::get_imeCompositionMode
-UnityEngine.JsonUtility::FromJson
 UnityEngine.JsonUtility::ToJson
 UnityEngine.Material::HasProperty
 UnityEngine.Material::DisableKeyword
