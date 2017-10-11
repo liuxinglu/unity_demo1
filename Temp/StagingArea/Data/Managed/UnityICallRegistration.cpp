@@ -810,10 +810,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.CharacterController
 
-		//System.Boolean UnityEngine.CharacterController::get_isGrounded()
-		void Register_UnityEngine_CharacterController_get_isGrounded();
-		Register_UnityEngine_CharacterController_get_isGrounded();
-
 		//UnityEngine.CollisionFlags UnityEngine.CharacterController::INTERNAL_CALL_Move(UnityEngine.CharacterController,UnityEngine.Vector3&)
 		void Register_UnityEngine_CharacterController_INTERNAL_CALL_Move();
 		Register_UnityEngine_CharacterController_INTERNAL_CALL_Move();

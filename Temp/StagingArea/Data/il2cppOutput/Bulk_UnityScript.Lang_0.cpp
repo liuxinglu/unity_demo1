@@ -21,13 +21,13 @@
 // System.String
 struct String_t;
 // System.Char[]
-struct CharU5BU5D_t1242876772;
+struct CharU5BU5D_t2644401608;
 
 
 
 
-#ifndef U3CMODULEU3E_T3825170579_H
-#define U3CMODULEU3E_T3825170579_H
+#ifndef U3CMODULEU3E_T2816031027_H
+#define U3CMODULEU3E_T2816031027_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -35,7 +35,7 @@ struct CharU5BU5D_t1242876772;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t3825170579 
+struct  U3CModuleU3E_t2816031027 
 {
 public:
 
@@ -45,7 +45,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T3825170579_H
+#endif // U3CMODULEU3E_T2816031027_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__
@@ -75,8 +75,8 @@ struct Il2CppArrayBounds;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEARRAY_H
-#ifndef UNITYBUILTINS_T3659130971_H
-#define UNITYBUILTINS_T3659130971_H
+#ifndef UNITYBUILTINS_T795422216_H
+#define UNITYBUILTINS_T795422216_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -84,7 +84,7 @@ struct Il2CppArrayBounds;
 #endif
 
 // UnityScript.Lang.UnityBuiltins
-struct  UnityBuiltins_t3659130971  : public RuntimeObject
+struct  UnityBuiltins_t795422216  : public RuntimeObject
 {
 public:
 
@@ -94,7 +94,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // UNITYBUILTINS_T3659130971_H
+#endif // UNITYBUILTINS_T795422216_H
 #ifndef STRING_T_H
 #define STRING_T_H
 #ifdef __clang__
@@ -136,7 +136,7 @@ public:
 	// System.String System.String::Empty
 	String_t* ___Empty_2;
 	// System.Char[] System.String::WhiteChars
-	CharU5BU5D_t1242876772* ___WhiteChars_3;
+	CharU5BU5D_t2644401608* ___WhiteChars_3;
 
 public:
 	inline static int32_t get_offset_of_Empty_2() { return static_cast<int32_t>(offsetof(String_t_StaticFields, ___Empty_2)); }
@@ -149,9 +149,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_WhiteChars_3() { return static_cast<int32_t>(offsetof(String_t_StaticFields, ___WhiteChars_3)); }
-	inline CharU5BU5D_t1242876772* get_WhiteChars_3() const { return ___WhiteChars_3; }
-	inline CharU5BU5D_t1242876772** get_address_of_WhiteChars_3() { return &___WhiteChars_3; }
-	inline void set_WhiteChars_3(CharU5BU5D_t1242876772* value)
+	inline CharU5BU5D_t2644401608* get_WhiteChars_3() const { return ___WhiteChars_3; }
+	inline CharU5BU5D_t2644401608** get_address_of_WhiteChars_3() { return &___WhiteChars_3; }
+	inline void set_WhiteChars_3(CharU5BU5D_t2644401608* value)
 	{
 		___WhiteChars_3 = value;
 		Il2CppCodeGenWriteBarrier((&___WhiteChars_3), value);
@@ -162,8 +162,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STRING_T_H
-#ifndef VALUETYPE_T2631698734_H
-#define VALUETYPE_T2631698734_H
+#ifndef VALUETYPE_T3345440224_H
+#define VALUETYPE_T3345440224_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -171,7 +171,7 @@ public:
 #endif
 
 // System.ValueType
-struct  ValueType_t2631698734  : public RuntimeObject
+struct  ValueType_t3345440224  : public RuntimeObject
 {
 public:
 
@@ -182,16 +182,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 // Native definition for P/Invoke marshalling of System.ValueType
-struct ValueType_t2631698734_marshaled_pinvoke
+struct ValueType_t3345440224_marshaled_pinvoke
 {
 };
 // Native definition for COM marshalling of System.ValueType
-struct ValueType_t2631698734_marshaled_com
+struct ValueType_t3345440224_marshaled_com
 {
 };
-#endif // VALUETYPE_T2631698734_H
-#ifndef SINGLE_T3691390326_H
-#define SINGLE_T3691390326_H
+#endif // VALUETYPE_T3345440224_H
+#ifndef SINGLE_T685791781_H
+#define SINGLE_T685791781_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -199,14 +199,14 @@ struct ValueType_t2631698734_marshaled_com
 #endif
 
 // System.Single
-struct  Single_t3691390326 
+struct  Single_t685791781 
 {
 public:
 	// System.Single System.Single::m_value
 	float ___m_value_7;
 
 public:
-	inline static int32_t get_offset_of_m_value_7() { return static_cast<int32_t>(offsetof(Single_t3691390326, ___m_value_7)); }
+	inline static int32_t get_offset_of_m_value_7() { return static_cast<int32_t>(offsetof(Single_t685791781, ___m_value_7)); }
 	inline float get_m_value_7() const { return ___m_value_7; }
 	inline float* get_address_of_m_value_7() { return &___m_value_7; }
 	inline void set_m_value_7(float value)
@@ -218,23 +218,23 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // SINGLE_T3691390326_H
+#endif // SINGLE_T685791781_H
 
 
 
 // System.Single System.Single::Parse(System.String)
-extern "C"  float Single_Parse_m3358567779 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C"  float Single_Parse_m1098694090 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Single UnityScript.Lang.UnityBuiltins::parseFloat(System.String)
-extern "C"  float UnityBuiltins_parseFloat_m3247936862 (RuntimeObject * __this /* static, unused */, String_t* ___value0, const RuntimeMethod* method)
+extern "C"  float UnityBuiltins_parseFloat_m2189412441 (RuntimeObject * __this /* static, unused */, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
-		float L_1 = Single_Parse_m3358567779(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		float L_1 = Single_Parse_m1098694090(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		return L_1;
 	}
 }

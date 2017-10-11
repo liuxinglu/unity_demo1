@@ -175,7 +175,6 @@ UnityEngine.CapsuleCollider::INTERNAL_set_center
 UnityEngine.CapsuleCollider::set_direction
 UnityEngine.CapsuleCollider::set_height
 UnityEngine.CapsuleCollider::set_radius
-UnityEngine.CharacterController::get_isGrounded
 UnityEngine.CharacterController::INTERNAL_CALL_Move
 UnityEngine.Collider::INTERNAL_CALL_Internal_Raycast
 UnityEngine.Collider::get_enabled

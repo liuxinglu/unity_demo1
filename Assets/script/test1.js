@@ -97,20 +97,26 @@ function FixedUpdate() {
 			var obj = new Msg();
 			obj.type = '3dMove';
 			var ctrller:CharacterController = GetComponent.<CharacterController>();
-			if(ctrller.isGrounded) {
+//			if(ctrller.isGrounded) {
+				var dir:Vector3;
+//				if(_move_dir != null) {
+					dir = Vector3(_move_dir.x, _move_dir.y, _move_dir.z);
+//				}
 				_move_dir = Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 				_move_dir = transform.TransformDirection(_move_dir);
 				_move_dir *= speed;
 				_move_dir.y -= grav * Time.deltaTime;
-				obj.data = _move_dir.x + "," + _move_dir.y + "," + _move_dir.z;
-				DataHandler.handler.sendMessageToServer(obj);
-			}
+				if(dir.x != _move_dir.x || dir.y != _move_dir.y || dir.z != _move_dir.z) {
+					obj.data = _move_dir.x + "," + _move_dir.y + "," + _move_dir.z;
+					DataHandler.handler.sendMessageToServer(obj);
+				}
+//			}
 			if(Input.GetButton("Jump")) {
 				_move_dir.y = jump_speed;
 				obj.data = _move_dir.x + "," + _move_dir.y + "," + _move_dir.z;
 				DataHandler.handler.sendMessageToServer(obj);
 			}
-			_move_dir.y -= grav * Time.deltaTime;
+//			_move_dir.y -= grav * Time.deltaTime;
 			ctrller.Move(_move_dir * Time.deltaTime);
 		}
 	}

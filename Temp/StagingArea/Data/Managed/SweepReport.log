@@ -11,7 +11,7 @@ Summary:
     Generic Abstract Classes = 4
     Attributes = 188
   Total Field Removals = 856
-  Total Method Removals = 11275
+  Total Method Removals = 11276
 ---------------------------------------------------
 ---------------------------------------------------
 Assembly: Boo.Lang
@@ -10406,7 +10406,7 @@ Summary:
     Generic Abstract Classes = 0
     Attributes = 49
   Total Field Removals = 54
-  Total Method Removals = 4343
+  Total Method Removals = 4344
   References Removed = 0
 ---------------------------------------------------
     AOT.MonoPInvokeCallbackAttribute
@@ -11498,6 +11498,7 @@ Summary:
         get_detectCollisions()
         get_enableOverlapRecovery()
         get_height()
+        get_isGrounded()
         get_minMoveDistance()
         get_radius()
         get_skinWidth()
